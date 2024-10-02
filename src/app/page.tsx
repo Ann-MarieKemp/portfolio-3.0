@@ -14,10 +14,10 @@ const Home =  () => {
           I am a <span className={styles['fade-in']}>Full Stack Software Developer</span> who enjoys <span className={styles['fade-in']}>troubleshooting</span>, <span className={styles['fade-in']}>testing</span> and <span className={styles['fade-in']}>documentation</span>.
         </p>
         <div className={styles['mainpage-project-link-container']}>
-          {/* <ProjectLink
+          <ProjectLink
             linkTo="/AboutMe"
             linkText="About Ann-Marie"
-          /> */}
+          />
           {/* <ProjectLink
             linkTo="/Projects"
             linkText="Projects"
