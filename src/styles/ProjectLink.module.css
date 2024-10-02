@@ -1,0 +1,72 @@
+.link-container {
+  width: 250px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  word-wrap: break-word;
+  text-align: center;
+  align-content: center;
+  margin-top: 1.5em;
+  font-size: 20px;
+  padding: 0 10px;
+  flex-wrap: wrap;
+  box-shadow: -0.5px 0.5px 3px 1px #A9A9A9;
+}
+.link-container:hover {
+  border: 1px solid #FF3B3F;
+  box-shadow: none;
+  color: #FF3B3F
+}
+
+.fade-in {
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
