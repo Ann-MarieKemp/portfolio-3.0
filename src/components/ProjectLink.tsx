@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from '../styles/ProjectLink.module.css'
 
 interface ProjectLinkProps {
@@ -9,10 +9,10 @@ interface ProjectLinkProps {
 
 const ProjectLink = ({ linkTo, linkText, last}: ProjectLinkProps) => {
   return (
-    <Link className={styles['category-link']} to={linkTo}>
+    <Link className="category-link" href={linkTo}>
       <button
         tabIndex={-1}
-        className={last ? "link-container fade-in last-row" : "link-container fade-in"}
+        className={last ? `${styles['link-container']} ${styles['fade-in']} ${styles['last-row']}` : `${styles['link-container']} ${styles['fade-in']}`}
       >{linkText}
       </button>
     </Link>
