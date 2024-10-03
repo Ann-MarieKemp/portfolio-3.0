@@ -1,0 +1,44 @@
+.single-project-box {
+  display: flex;
+  border: 1px solid #A9A9A9;
+  box-shadow: 3px;
+  margin-top: 2em;
+  flex-direction: column;
+  width: 75vw;
+  border-radius: 5px;
+  padding: 12px;
+}
+@media only screen and (max-width: 375px) {
+  .single-project-box {
+    width: 75vw;
+  }
+  .video iframe {
+    flex: 1;
+    width: 1em;
+  }
+}
+.project-github {
+  /* color: #16425b; */
+}
+.video {
+  display: flex;
+}
+
+.project-github:visited {
+  /* color: #16425b; */
+}
+.project-link-container {
+  display: flex;
+  justify-content: space-between;
+}
+.video {
+  flex-shrink: 1;
+}
+.youtube-embed {
+  margin-top: 10px;
+}
+.link-title-align {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

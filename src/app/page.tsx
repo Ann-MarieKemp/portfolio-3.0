@@ -18,11 +18,11 @@ const Home =  () => {
             linkTo="/AboutMe"
             linkText="About Ann-Marie"
           />
-          {/* <ProjectLink
+          <ProjectLink
             linkTo="/Projects"
             linkText="Projects"
           />
-          <ProjectLink
+          {/* <ProjectLink
             linkTo="/Crafts"
             linkText="Crafts"
           />

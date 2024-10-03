@@ -7,9 +7,9 @@ import styles from "./AboutMe.module.css";
 const AboutMe = () => {
   // const kittyImages = useKittyImages()
   return (
-      <div className={styles['main-page-container']}>
-        <p className='page-header'>About Ann-Marie</p>
-        <div className={styles['description-text']}>
+      <div className="main-page-container">
+        <p className="page-header">About Ann-Marie</p>
+        <div className="description-text">
           <p>
             Ann-Marie holds a degree in theatrical production from the University of Arizona. After college she relocated to New York City and began her professional career as a sound engineer and technician for theatrical productions working at some of the city's most famous off-broadway theaters including <span>The Public</span>, <span>Second Stage</span> and <span>Playwrights Horizons</span>. Highlights of her theatrical career included mixing the pre-broadway run of <span>Fun Home</span> at The Public, the revival of <span>The Last Five Years</span> directed by Jason Robert Brown at Second Stage, and working as a microphone technician at the <span>Delacorte Theater</span> in Central Park.
           </p>
@@ -29,7 +29,7 @@ const AboutMe = () => {
           <div className={styles['skills-container']}>
               <p className="sub-header-red">Technical Skills: <br/> Typescript, JavaScript, Node, React, Redux, HTML, CSS, VueJS, React Native, Git, Sequelize, Express, PostgreSQL, Github, Cassandra, GraphQL, Kafka, Travis, Jenkins, gRPC </p>
               <br/>
-            <p className={styles['sub-header-red']}>Audio Technical Skills:
+            <p className="sub-header-red">Audio Technical Skills:
             <br/>
               Consoles: Calrec Sigma, DiGiCo SD9/10/11, SSL C100, Studer Vista 5, Cadac J-Type, Yamaha CL Series
             <br/>
@@ -40,7 +40,7 @@ const AboutMe = () => {
           </div>
           <br />
           <div className={styles['crafts-link-wrapper']}>
-            <p className={styles['sub-header-cream']}>Other Interests</p>
+            <p>Other Interests</p>
 
             <p>
               When she's not coding she
@@ -59,7 +59,7 @@ const AboutMe = () => {
             </p>
             <ProjectLink linkTo="/Crafts" linkText="View Crafts" /> */}
           </div>
-          <div className={styles['nyc-info description-text']}>
+          <div className={`${styles['nyc-info']} description-text`}>
             <p>
               Ann-Marie lives in Arizona with her wonderful husband, her son, and her cat Carnival. As a reward for making it this far
               down the page here are some photos of Carnival:
