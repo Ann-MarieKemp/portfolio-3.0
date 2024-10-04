@@ -1,0 +1,33 @@
+.form-label {
+  color: #A9A9A9;
+  font-size: 24px;
+  width: 300px;
+}
+
+.clear {
+  color: #A9A9A9;
+  /* background-color: #16425b; */
+  height: 50px;
+  width: 200px;
+  font-size: 28px;
+  font-family: Georgia;
+  border-radius: 3px;
+  margin: 10px auto;
+}
+
+.contact-email {
+  font-size: 20px;
+  color: #A9A9A9;
+}
+.contact-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 75vw;
+}
+.contact-email:hover {
+  color: #FF3B3F;
+}
+.form-input {
+  font-size: 16px;
+}

@@ -26,10 +26,10 @@ const Home =  () => {
             linkTo="/Crafts"
             linkText="Crafts"
           />
-          {/* <ProjectLink
+          <ProjectLink
             linkTo="/ContactInfo"
             linkText="Contact Info"
-          /> */}
+          />
         </div>
       </div>
     </div>
