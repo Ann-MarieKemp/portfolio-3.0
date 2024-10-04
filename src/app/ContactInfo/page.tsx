@@ -1,14 +1,12 @@
 import React from "react"
 import styles from "./ContactInfo.module.css"
 import navStyles from "@/styles/Navbar.module.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faGithub,
-  faLinkedin,
-  faMedium,
-} from "@fortawesome/free-brands-svg-icons"
-// import { faFileDownload } from "@fortawesome/free-solid-svg-icons"
-// import resumeFile from "@/constants/Ann-MarieKemp_Resume.pdf"
+  FaGithub,
+  FaLinkedin,
+  FaMedium,
+  FaFileDownload
+} from "react-icons/fa"
 
 const ContactInfo = () => {
   return (
@@ -23,27 +21,27 @@ const ContactInfo = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon className={navStyles["site-icons"]} icon={faGithub} />
+              <FaGithub />
             </a>
             <a
               target="_blank"
               href="https://medium.com/@amkemp"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon className={navStyles["site-icons"]} icon={faMedium} />
+              <FaMedium />
             </a>
 
             <a
-              className="page-link"
+              className={navStyles["page-link"]}
               href="https://www.linkedin.com/in/ann-mariekemp/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon className={navStyles["site-icons"]} icon={faLinkedin} />
+              <FaLinkedin />
             </a>
-            {/* <a target="_blank" href={resumeFile} rel="noopener noreferrer"> */}
-              {/* <FontAwesomeIcon className={navStyles["site-icons"]} icon={faFileDownload} /> */}
-            {/* </a> */}
+            <a target="_blank" href={"/Ann-MarieKemp_Resume.pdf"} rel="noopener noreferrer">
+              <FaFileDownload />
+            </a>
           </div>
         </div>
         <div className="main-page-container"></div>
