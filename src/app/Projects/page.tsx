@@ -7,6 +7,7 @@ import {
   rateYourRepDescription,
   IBMProjectOverview,
   IBMProjectDescriptions,
+  twelveStepsDescription
 } from "@/constants/projectvariables"
 
 const Projects = () => {
@@ -20,9 +21,8 @@ const Projects = () => {
           additionalText={IBMProjectDescriptions}
         />
         <SingleProject
-          projectName={"RateYourRep"}
-          github={"https://github.com/HackForBLMTeam30/RateYourRep"}
-          description={rateYourRepDescription}
+          projectName={"12Steps.video"}
+          description={twelveStepsDescription}
         />
         <SingleProject
           projectName={"Dot Eater"}

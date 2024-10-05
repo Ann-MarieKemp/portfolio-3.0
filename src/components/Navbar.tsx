@@ -1,21 +1,17 @@
 import React from "react"
 import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   FaGithub,
   FaLinkedin,
   FaMedium,
   FaFileDownload,
 } from "react-icons/fa"
-// import { faFileDownload } from "@fortawesome/free-solid-svg-icons"
-// import resumeFile from "@/constants/Ann-MarieKemp_Resume.pdf"
 import  styles from "@/styles/Navbar.module.css"
 
 const Navbar = () => {
   return (
     <nav role="navigation" id={styles["nav-bar-container"]}>
       <div className={styles["nav-title-container"]}>
-        {/* <StaticImage src="../images/mainPortfolioImage.JPG" className="portfolio-photo small" /> */}
         <p className={styles["name-spacing"]}>Ann-Marie Kemp</p>
       </div>
       <div className={styles['links-and-icons-container']}>
@@ -42,7 +38,7 @@ const Navbar = () => {
             href="https://medium.com/@amkemp"
             rel="noopener noreferrer"
           >
-            <FaMedium />
+            <FaMedium size="24" />
           </a>
           <a
             className="page-link"
@@ -50,7 +46,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub />
+            <FaGithub size="24" />
           </a>
           <a
             className="page-link"
@@ -58,10 +54,10 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin />
+            <FaLinkedin size="24" />
           </a>
           <a target="_blank" href={"/Ann-MarieKemp_Resume.pdf"} rel="noopener noreferrer">
-              <FaFileDownload />
+              <FaFileDownload size="24" />
             </a>
         </div>
       </div>

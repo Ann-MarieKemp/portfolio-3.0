@@ -21,14 +21,14 @@ const ContactInfo = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub />
+              <FaGithub size="24" />
             </a>
             <a
               target="_blank"
               href="https://medium.com/@amkemp"
               rel="noopener noreferrer"
             >
-              <FaMedium />
+              <FaMedium size="24" />
             </a>
 
             <a
@@ -37,10 +37,10 @@ const ContactInfo = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin />
+              <FaLinkedin size="24" />
             </a>
             <a target="_blank" href={"/Ann-MarieKemp_Resume.pdf"} rel="noopener noreferrer">
-              <FaFileDownload />
+              <FaFileDownload size="24" />
             </a>
           </div>
         </div>
