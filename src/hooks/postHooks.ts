@@ -2,12 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
 
-const root = path.join(process.cwd(),'src', 'app', 'PostPage', 'posts');
-
-export const getPostBySlug = async (slug: string) => {
+export const getPostBySlug = async (slug: string, category: string) => {
   const realSlug = slug.replace(/\.mdx$/, '');
-  console.log(realSlug,' is slug')
-  const filePath = path.join(root, `${realSlug}.mdx`);
+  const categoryRoot = path.join(process.cwd(),'src', 'app', 'PostPage', category);
+  const filePath = path.join(categoryRoot, `${realSlug}.mdx`);
   const fileContent = fs.readFileSync(filePath, { encoding: 'utf8'});
 
   const { frontmatter, content} = await compileMDX({
@@ -18,12 +16,13 @@ export const getPostBySlug = async (slug: string) => {
   return { meta: {...frontmatter, slug: realSlug }, content }
 }
 
-export const getAllPostsMeta =  async() => {
-  const files = fs.readdirSync(root);
+export const getAllPostsMeta = async (category: string) => {
+  const categoryRoot = path.join(process.cwd(),'src', 'app', 'PostPage', category);
+  const files = fs.readdirSync(categoryRoot);
   const posts = []
 
   for (const file of files) {
-    const { meta } = await getPostBySlug(file);
+    const { meta } =  await getPostBySlug(file, category);
     posts.push(meta)
   }
 

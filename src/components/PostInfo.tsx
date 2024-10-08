@@ -10,11 +10,11 @@ const PostInfo = ({ posts }:PostInfoProps) => {
   return (
     <>
       {posts.map((post: any) => {
-        let imageClass = styles["post-preview-image"]
+        // let imageClass = styles["post-preview-image"]
         return (
           <div className={styles['weeks-of-baking-container']} key={post}>
             <div className={styles["post-preview-container"]} key={post.title}>
-              <Link className="category-link" passHref={`/${post.slug}`}>
+              <Link className="category-link" href={`/${post.slug}`}>
                 {post.title}
               </Link>
             </div>

@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "@/styles/BakingWeeks.module.css"
 import PostInfo from "@/components/PostInfo"
+import { getAllPostsMeta } from "@/hooks/postHooks"
 
 const PaperCrafts = () => {
   return (

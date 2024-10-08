@@ -2,9 +2,14 @@ import { getAllPostsMeta } from "@/hooks/postHooks";
 
 const Posts = async () => {
 
-  const posts = await getAllPostsMeta();
+  const posts = await getAllPostsMeta('weaving');
   console.log(posts, 'is posts')
-  return <div>{ posts[0].title }</div>
+  return (<>
+  {posts.map((post) => {
+    return (<div>{post.title}</div>)
+  })}
+
+  </>)
 }
 
 export default Posts;
