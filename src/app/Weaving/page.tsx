@@ -6,7 +6,6 @@ import { getAllPostsMeta } from "@/hooks/postHooks"
 
 const Weaving = async () => {
   const posts = await getAllPostsMeta('weaving');
-  console.log(posts,' is posts')
   return (
       <div className="main-page-container">
         <div className={styles["baking-page"]}>
