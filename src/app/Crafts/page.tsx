@@ -11,9 +11,6 @@ const Crafts = () => {
     {linkTo: "/Weaving", linkText: "Weaving", alt: "woven blanket"},
   ]
 
-  // const linkStyle = {
-  //   margin: 0,
-  // }
   return (
       <div className="main-page-container">
         <p className="page-header">Craft Projects</p>

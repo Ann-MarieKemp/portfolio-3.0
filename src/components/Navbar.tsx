@@ -1,20 +1,17 @@
 import React from "react"
 import Link from "next/link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faGithub,
-  faLinkedin,
-  faMedium,
-} from "@fortawesome/free-brands-svg-icons"
-import { faFileDownload } from "@fortawesome/free-solid-svg-icons"
-// import resumeFile from "@/constants/Ann-MarieKemp_Resume.pdf"
-import styles from "@/styles/Navbar.module.css"
+  FaGithub,
+  FaLinkedin,
+  FaMedium,
+  FaFileDownload,
+} from "react-icons/fa"
+import  styles from "@/styles/Navbar.module.css"
 
 const Navbar = () => {
   return (
     <nav role="navigation" id={styles["nav-bar-container"]}>
       <div className={styles["nav-title-container"]}>
-        {/* <StaticImage src="../images/mainPortfolioImage.JPG" className="portfolio-photo small" /> */}
         <p className={styles["name-spacing"]}>Ann-Marie Kemp</p>
       </div>
       <div className={styles['links-and-icons-container']}>
@@ -28,20 +25,20 @@ const Navbar = () => {
           <Link className={styles["page-link"]} href="/Projects">
             Projects
           </Link>
-          {/* <Link className="page-link" to="/Crafts">
+          <Link className={styles["page-link"]} href="/Crafts">
             Crafts
-          </Link> */}
-          {/* <Link className="page-link" to="/ContactInfo">
+          </Link>
+          <Link className={styles["page-link"]} href="/ContactInfo">
             Contact
-          </Link> */}
+          </Link>
         </div>
-        <div className="icons-box">
+        <div className={styles["icons-box"]}>
           <a
             target="_blank"
             href="https://medium.com/@amkemp"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className="site-icons" icon={faMedium} />
+            <FaMedium size="24" />
           </a>
           <a
             className="page-link"
@@ -49,7 +46,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className={styles["site-icons"]} icon={faGithub} />
+            <FaGithub size="24" />
           </a>
           <a
             className="page-link"
@@ -57,11 +54,11 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className={styles["site-icons"]} icon={faLinkedin} />
+            <FaLinkedin size="24" />
           </a>
-          <a target="_blank" href={""} rel="noopener noreferrer">
-            <FontAwesomeIcon className={styles["site-icons"]} icon={faFileDownload} />
-          </a>
+          <a target="_blank" href={"/Ann-MarieKemp_Resume.pdf"} rel="noopener noreferrer">
+              <FaFileDownload size="24" />
+            </a>
         </div>
       </div>
     </nav>
