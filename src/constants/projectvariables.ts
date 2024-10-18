@@ -23,3 +23,34 @@ export const twelveStepsDescription =
     "Acted as technical lead for a team building an internal React Native application.",
     "Assisted teammates to troubleshoot complex technical problems."
   ]
+
+  export const notificationsAndSettingsDescription =  [
+    "Contributed features and test coverage to a real time event driven notification service using Kafka",
+    "Built and maintained a RESTful service storing the settings preferences for thousands of IBMers across multiple application tenants in a Cassandra NoSQL database"
+  ]
+
+  export const graphAndHomepage = [
+    "Improved Oauth2 login experience within the w3 homepage through continuous delivery",
+    "Instituted code review and unit testing standards across the internal organization",
+    "Identified and fixed numerous production bugs",
+    "Implemented new backend services to improve IBM intranet homepage as an individual contributor in response to organizational needs",
+    "Developed frontend features to improve the internal IBM w3 Homepage used by more than 200,000 employees",
+    "Coordinated releases of w3 homepage application as part of a 4 person leadership rotation"
+  ]
+
+  export const mobile = [
+    "Led development team building an enterprise React Native application for release on iOS and Android",
+    "Architected a backend service allowing offline access to enterprise directory information supporting shared usage by internal mobile applications built in Swift and React Native",
+    "Assisted teammates to troubleshoot complex technical problems",
+    "Coordinated release planning and prioritized JIRA ticket work with product owners",
+    "Supervised development of new mobile application features",
+    "Implemented deployment processes for mobile application using Jenkins and App Center",
+    "Delivered improved application on a new architecture using React Native resulting in greater cross team collaboration and decreased reliance on rare skills within the department"
+  ]
+
+  export const slackApp = [
+    "Developed slack application handling user interactions handling chatbot interactions using generative AI RAG backend enabling product specific IT Support",
+    "Collaborated with team to develop architecture for end to end system flow"
+  ]
+
+  export const slackAppDescription = "Built slack application for product based IT support"

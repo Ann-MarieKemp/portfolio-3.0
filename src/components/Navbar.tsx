@@ -10,7 +10,7 @@ import  styles from "@/styles/Navbar.module.css"
 
 const Navbar = () => {
   return (
-    <nav role="navigation" id={styles["nav-bar-container"]}>
+    <nav role="navigation" className={styles["nav-bar-container"]}>
       <div className={styles["nav-title-container"]}>
         <p className={styles["name-spacing"]}>Ann-Marie Kemp</p>
       </div>
