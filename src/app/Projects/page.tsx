@@ -4,9 +4,11 @@ import styles from "./Projects.module.css"
 import {
   dotEaterDescription,
   recipixDescription,
-  rateYourRepDescription,
-  IBMProjectOverview,
-  IBMProjectDescriptions,
+  twelveStepsDescription,
+  slackApp,
+  mobile,
+  graphAndHomepage,
+  notificationsAndSettingsDescription
 } from "@/constants/projectvariables"
 
 const Projects = () => {
@@ -14,20 +16,36 @@ const Projects = () => {
     <>
       <p className="page-header">Projects </p>
       <div className={styles['all-projects-box']}>
-        <SingleProject
-          projectName={"IBM Software Developer"}
-          description={IBMProjectOverview}
-          additionalText={IBMProjectDescriptions}
+      <SingleProject
+          projectName={"IBM - IT Support Slack Application"}
+          description={""}
+          additionalText={slackApp}
+          last
         />
         <SingleProject
-          projectName={"RateYourRep"}
-          github={"https://github.com/HackForBLMTeam30/RateYourRep"}
-          description={rateYourRepDescription}
+          projectName={"IBM - w3 Mobile Application"}
+          description = {""}
+          additionalText={mobile}
+          last
         />
         <SingleProject
+          projectName={"IBM - w3 Graph/w3 Homepage"}
+          additionalText={graphAndHomepage}
+          last
+        />
+        <SingleProject
+          projectName={"IBM - w3 Graph/w3 Homepage"}
+          additionalText={notificationsAndSettingsDescription}
+          last
+        />
+        <SingleProject
+          projectName={"IBM - w3 Notifications/w3 Settings"}
+          additionalText={notificationsAndSettingsDescription}
+          last
+        />
+      <SingleProject
           projectName={"Dot Eater"}
           github={"https://github.com/Team-Blade/Capstone-Project"}
-          description={dotEaterDescription}
           linkText="Play The Game!"
           deployLink="http://dot-eater.herokuapp.com/"
           src="https://www.youtube.com/embed/3pskwXDw2nQ"
@@ -37,7 +55,6 @@ const Projects = () => {
           projectName={"Recipix"}
           github="https://github.com/Ann-MarieKemp/Recipix"
           description={recipixDescription}
-          last
           src="https://www.youtube.com/embed/oWoqoSWUoTA"
           // video={videos[1]}
         />

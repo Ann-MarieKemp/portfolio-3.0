@@ -11,7 +11,7 @@ const Home =  () => {
       <h1 className="main-page-header">Hello, my name is Ann-Marie Kemp</h1>
       <div className={`${styles['about-me-tag']} ${styles['index']}`}>
         <p>
-          I am a <span className={styles['fade-in']}>Full Stack Software Developer</span> who enjoys <span className={styles['fade-in']}>troubleshooting</span>, <span className={styles['fade-in']}>testing</span> and <span className={styles['fade-in']}>documentation</span>.
+          I am a <span className={styles['fade-in']}>Full Stack Software Developer</span> who enjoys troubleshooting, testing, and documentation.
         </p>
         <div className={styles['mainpage-project-link-container']}>
           <ProjectLink
@@ -22,14 +22,14 @@ const Home =  () => {
             linkTo="/Projects"
             linkText="Projects"
           />
-          <ProjectLink
+          {/* <ProjectLink
             linkTo="/Crafts"
             linkText="Crafts"
-          />
-          {/* <ProjectLink
+          /> */}
+          <ProjectLink
             linkTo="/ContactInfo"
             linkText="Contact Info"
-          /> */}
+          />
         </div>
       </div>
     </div>
