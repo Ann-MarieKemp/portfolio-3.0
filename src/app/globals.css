@@ -6,7 +6,6 @@
 }
 html {
   background-color: #557899;
-  /* overflow-x: hidden; */
 }
 h1 {
   color: #FFFFFF;
@@ -18,7 +17,7 @@ a {
   color: #FFFFFF
 }
 a:visited {
-  color: black
+  color: #FFFFFF
 }
 p {
   color: #FFFFFF;
@@ -27,7 +26,6 @@ p {
   font-family: Georgia, sans-serif;
 }
 .page-header {
-  /* margin-top: 0.2em; */
   font-size: 50px;
   text-align: center;
 }
@@ -47,7 +45,8 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
 }
 
 a:hover {
@@ -86,7 +85,6 @@ a:hover {
 }
 .form-container {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   justify-content: space-between;
 
@@ -134,9 +132,6 @@ a:hover {
 }
 @media screen {
   html,
-  body {
-    overflow-x: hidden;
-  }
   body {
     position: relative;
   }

@@ -30,6 +30,7 @@ export const twelveStepsDescription =
   ]
 
   export const graphAndHomepage = [
+    "Maintained production code and documentation for a GraphQL layer combining resolvers for more than 20 RESTful and gRPC microservices to service a unified UI experience",
     "Improved Oauth2 login experience within the w3 homepage through continuous delivery",
     "Instituted code review and unit testing standards across the internal organization",
     "Identified and fixed numerous production bugs",
@@ -53,4 +54,3 @@ export const twelveStepsDescription =
     "Collaborated with team to develop architecture for end to end system flow"
   ]
 
-  export const slackAppDescription = "Built slack application for product based IT support"

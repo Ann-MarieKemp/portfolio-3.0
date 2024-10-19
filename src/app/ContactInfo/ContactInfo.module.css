@@ -17,16 +17,21 @@
 
 .contact-email {
   font-size: 20px;
-  color: #A9A9A9;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
 }
 .contact-link-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   width: 75vw;
 }
 .contact-email:hover {
-  color: #FF3B3F;
+  color: #A9A9A9;
+}
+.contact-email:visited {
+  color: #FFFFFF;
 }
 .form-input {
   font-size: 16px;

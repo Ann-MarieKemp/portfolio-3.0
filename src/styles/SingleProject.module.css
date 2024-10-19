@@ -17,26 +17,17 @@
     width: 1em;
   }
 }
-.project-github {
-  /* color: #16425b; */
-}
 .video {
   display: flex;
+  margin-top: 1rem;
+  flex-shrink: 1;
 }
 
-.project-github:visited {
-  /* color: #16425b; */
-}
 .project-link-container {
   display: flex;
   justify-content: space-between;
 }
-.video {
-  flex-shrink: 1;
-}
-.youtube-embed {
-  margin-top: 10px;
-}
+
 .link-title-align {
   display: flex;
   justify-content: space-between;
