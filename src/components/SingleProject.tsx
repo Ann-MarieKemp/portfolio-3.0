@@ -3,7 +3,7 @@ import styles from "@/styles/SingleProject.module.css";
 
 interface SingleProjectProps {
   projectName: string;
-  description: string;
+  description?: string;
   github?: string;
   src?: string;
   additionalText?: string[];

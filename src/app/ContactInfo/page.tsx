@@ -21,14 +21,14 @@ const ContactInfo = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub size="24" />
+                <FaGithub size="36" />
               </a>
               <a
                 target="_blank"
                 href="https://medium.com/@amkemp"
                 rel="noopener noreferrer"
               >
-                <FaMedium size="24" />
+                <FaMedium size="36" />
               </a>
               <a
                 className={navStyles["page-link"]}
@@ -36,10 +36,10 @@ const ContactInfo = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaLinkedin size="24" />
+                <FaLinkedin size="36" />
               </a>
               <a target="_blank" href={"/Ann-MarieKemp_Resume.pdf"} rel="noopener noreferrer">
-                <FaFileDownload size="24" />
+                <FaFileDownload size="36" />
               </a>
           </div>
         </div>

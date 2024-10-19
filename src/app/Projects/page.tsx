@@ -4,12 +4,8 @@ import styles from "./Projects.module.css"
 import {
   dotEaterDescription,
   recipixDescription,
-
-  IBMProjectOverview,
-  IBMProjectDescriptions,
   twelveStepsDescription,
   slackApp,
-  slackAppDescription,
   mobile,
   graphAndHomepage,
   notificationsAndSettingsDescription
@@ -22,7 +18,7 @@ const Projects = () => {
       <div className={styles['all-projects-box']}>
       <SingleProject
           projectName={"IBM - IT Support Slack Application"}
-          description = {slackAppDescription}
+          description={""}
           additionalText={slackApp}
           last
         />
@@ -34,30 +30,22 @@ const Projects = () => {
         />
         <SingleProject
           projectName={"IBM - w3 Graph/w3 Homepage"}
-          description = {""}
           additionalText={graphAndHomepage}
           last
         />
         <SingleProject
           projectName={"IBM - w3 Graph/w3 Homepage"}
-          description = {""}
           additionalText={notificationsAndSettingsDescription}
           last
         />
         <SingleProject
           projectName={"IBM - w3 Notifications/w3 Settings"}
-          description = {""}
           additionalText={notificationsAndSettingsDescription}
           last
         />
       <SingleProject
-          projectName={"12Steps.video"}
-          description={twelveStepsDescription}
-        />
-        <SingleProject
           projectName={"Dot Eater"}
           github={"https://github.com/Team-Blade/Capstone-Project"}
-          description={dotEaterDescription}
           linkText="Play The Game!"
           deployLink="http://dot-eater.herokuapp.com/"
           src="https://www.youtube.com/embed/3pskwXDw2nQ"

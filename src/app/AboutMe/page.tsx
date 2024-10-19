@@ -23,7 +23,7 @@ const AboutMe = () => {
             </p>
           <br />
           <div className={styles['skills-container']}>
-              <p className="sub-header-red">Technical Skills: <br/> Typescript, JavaScript, Node, React, Redux, HTML, CSS, VueJS, React Native, Git, Sequelize, Express, PostgreSQL, Github, Cassandra, GraphQL, Kafka, Travis, Jenkins, gRPC </p>
+              <p className="sub-header-red">Technical Skills: <br/> TypeScript, JavaScript, React, React Native, VueJS, Node, Redux, HTML, CSS, Git, SQL, Express, Jest, Github, PostgreSQL, Cassandra, GraphQL, Jira, Travis, Jenkins, RAG, LangChain, NoSQL Databases </p>
               <br/>
             <p className="sub-header-red">Audio Technical Skills:
             <br/>

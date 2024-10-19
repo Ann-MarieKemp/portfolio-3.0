@@ -6,7 +6,6 @@
 
 .clear {
   color: #A9A9A9;
-  /* background-color: #16425b; */
   height: 50px;
   width: 200px;
   font-size: 28px;
@@ -26,9 +25,6 @@
   align-items: center;
   justify-content: space-evenly;
   width: 75vw;
-}
-.contact-email:hover {
-  color: #A9A9A9;
 }
 .contact-email:visited {
   color: #FFFFFF;
