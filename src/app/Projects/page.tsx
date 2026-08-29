@@ -8,7 +8,8 @@ import {
   slackApp,
   mobile,
   graphAndHomepage,
-  notificationsAndSettingsDescription
+  notificationsAndSettingsDescription,
+  centenePlaceholder
 } from "@/constants/projectvariables"
 
 const Projects = () => {
@@ -16,6 +17,10 @@ const Projects = () => {
     <>
       <p className="page-header">Projects </p>
       <div className={styles['all-projects-box']}>
+      <SingleProject
+          projectName={"Centene - Mobile Application Development"}
+          additionalText={centenePlaceholder}
+        />
       <SingleProject
           projectName={"IBM - IT Support Slack Application"}
           description={""}
