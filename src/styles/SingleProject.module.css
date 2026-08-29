@@ -1,17 +1,21 @@
 .single-project-box {
   display: flex;
-  border: 1px solid #A9A9A9;
-  box-shadow: 3px;
-  margin-bottom: 2em;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  margin-bottom: var(--space-6);
   flex-direction: column;
-  width: 75vw;
-  border-radius: 5px;
-  padding: 12px;
+  width: 100%;
+  max-width: 700px;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: box-shadow 150ms ease, transform 150ms ease;
+}
+.single-project-box:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
 }
 @media only screen and (max-width: 375px) {
-  .single-project-box {
-    width: 75vw;
-  }
   .video iframe {
     flex: 1;
     width: 1em;

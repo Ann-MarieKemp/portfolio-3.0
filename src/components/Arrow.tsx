@@ -10,8 +10,13 @@ interface ArrowProps {
 
 const Arrow = ({ clickFunc, graphic, disabled }: ArrowProps) => {
   return (
-    <button onClick={clickFunc} disabled={disabled} type="button">
-      <p className={styles.arrow}>{graphic}</p>
+    <button
+      className={styles["arrow-button"]}
+      onClick={clickFunc}
+      disabled={disabled}
+      type="button"
+    >
+      {graphic}
     </button>
   );
 };

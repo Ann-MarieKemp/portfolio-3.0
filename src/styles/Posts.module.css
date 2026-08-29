@@ -8,8 +8,9 @@
   transform: rotate(-90deg);
 }
 .post-text {
-  color: #FFFFFF;
-  width: 80vw;
+  color: var(--color-text);
+  width: 100%;
+  max-width: var(--content-max-width);
   font-size: 20px;
 }
 .category-link.baking {
@@ -17,5 +18,5 @@
   margin: 1em auto;
 }
 .category-link.baking:hover {
-  color: #FFFFFF;
+  color: var(--color-accent-hover);
 }
