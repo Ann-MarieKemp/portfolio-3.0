@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "next build && aws s3 sync out/ s3://$S3_BUCKET --delete"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
