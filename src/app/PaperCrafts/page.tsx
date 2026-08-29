@@ -9,6 +9,9 @@ const PaperCrafts = async () => {
       <div className="main-page-container">
         <div className={styles["baking-page"]}>
           <p className="page-header">Paper/Other Materials</p>
+          <p className={`description-text ${styles['baking']}`}>
+            Ann-Marie&apos;s paper and mixed-media projects &mdash; handmade wedding flowers and decor, Hardanger embroidery, and other one-off craft projects that don&apos;t fit neatly into a fiber-arts category.
+          </p>
 
           <div className={styles["baking-box"]}>
             {posts.length ? (

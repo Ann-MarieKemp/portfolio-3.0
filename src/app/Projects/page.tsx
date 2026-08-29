@@ -5,11 +5,10 @@ import {
   dotEaterDescription,
   recipixDescription,
   twelveStepsDescription,
-  slackApp,
-  mobile,
-  graphAndHomepage,
-  notificationsAndSettingsDescription,
-  centenePlaceholder
+  centeneLeadDescription,
+  centeneSeniorDescription,
+  ibmBand07Description,
+  ibmBand06Description
 } from "@/constants/projectvariables"
 
 const Projects = () => {
@@ -18,26 +17,20 @@ const Projects = () => {
       <p className="page-header">Projects </p>
       <div className={styles['all-projects-box']}>
       <SingleProject
-          projectName={"Centene - Mobile Application Development"}
-          additionalText={centenePlaceholder}
+          projectName={"Centene - Lead Application Development Engineer (Sept 2025 - Present)"}
+          additionalText={centeneLeadDescription}
         />
       <SingleProject
-          projectName={"IBM - IT Support Slack Application"}
-          description={""}
-          additionalText={slackApp}
+          projectName={"Centene / Apex Systems - Senior Application Development Engineer (Jan 2025 - Sept 2025)"}
+          additionalText={centeneSeniorDescription}
+        />
+      <SingleProject
+          projectName={"IBM - Software Developer, Band 07 (Oct 2021 - Jan 2025)"}
+          additionalText={ibmBand07Description}
         />
         <SingleProject
-          projectName={"IBM - w3 Mobile Application"}
-          description = {""}
-          additionalText={mobile}
-        />
-        <SingleProject
-          projectName={"IBM - w3 Graph/w3 Homepage"}
-          additionalText={graphAndHomepage}
-        />
-        <SingleProject
-          projectName={"IBM - w3 Notifications/w3 Settings"}
-          additionalText={notificationsAndSettingsDescription}
+          projectName={"IBM - Software Developer, Band 06 (Aug 2020 - Oct 2021)"}
+          additionalText={ibmBand06Description}
         />
       <SingleProject
           projectName={"Dot Eater"}

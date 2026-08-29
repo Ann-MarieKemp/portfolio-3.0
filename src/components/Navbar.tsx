@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import {
   FaGithub,
   FaLinkedin,
@@ -17,9 +18,16 @@ const Navbar = () => {
 
   return (
     <nav role="navigation" className={styles["nav-bar-container"]}>
-      <div className={styles["nav-title-container"]}>
+      <Link href="/" className={styles["nav-title-container"]} onClick={() => setMenuOpen(false)}>
+        <Image
+          src="/images/logo.png"
+          alt="A-M Codes logo"
+          width={40}
+          height={40}
+          className={styles["logo"]}
+        />
         <p className={styles["name-spacing"]}>Ann-Marie Kemp</p>
-      </div>
+      </Link>
       <button
         className={styles["menu-toggle"]}
         onClick={() => setMenuOpen((open) => !open)}

@@ -10,9 +10,7 @@ const BakingWeeks = async () => {
         <div className={`${styles["baking-page"]} ${styles['baking-links']}`}>
           <p className="page-header">52 Weeks of Baking 2015</p>
           <p className={`description-text ${styles['baking']}`}>
-            In 2015 Ann-Marie participated in a reddit challenge where she baked
-            a different dessert every week for a year. These are the posts she
-            made on reddit from that year.
+            In 2015, Ann-Marie baked a different dessert every week for a year as part of a reddit challenge &mdash; these are the posts from that year.
           </p>
 
           <div className={styles["baking-box"]}>

@@ -70,6 +70,34 @@ const AboutMe = () => {
           </p>
           <br />
 
+          <p className="sub-header">Education &amp; Certifications</p>
+          <p>
+            M.S. Computer Science, University of Colorado Boulder &mdash; in progress, expected 2028<br />
+            <em>Relevant coursework: Network Systems, Object-Oriented Analysis &amp; Design</em>
+          </p>
+          <br />
+          <p>
+            Software Engineering, The Grace Hopper Program at Fullstack Academy of Code &mdash; April 2020
+          </p>
+          <br />
+          <p>
+            Coursework in Android Development &amp; Mathematics, Rio Salado Community College
+          </p>
+          <br />
+          <p>
+            B.F.A. Theatrical Production Design and Technology, University of Arizona &mdash; December 2008
+          </p>
+          <br />
+          <p>
+            <a href="https://www.credly.com/badges/db9d6c92-b1c6-4e52-97a7-166a92e6f4fa" target="_blank" rel="noopener noreferrer">
+              IBM Developer Profession &mdash; Level 2 Experienced Credential
+            </a><br />
+            <a href="https://www.credly.com/badges/68d4a990-ccf3-42fd-a3ef-a0e481898a54/public_url" target="_blank" rel="noopener noreferrer">
+              IBM Blue Core Coach
+            </a>
+          </p>
+          <br />
+
           <p className="sub-header">What I&apos;m Working On</p>
           <p>These days I&apos;m particularly interested in:</p>
           <p>
