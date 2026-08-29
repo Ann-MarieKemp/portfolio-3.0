@@ -1,15 +1,17 @@
 import React from "react"
 import styles from "@/styles/BakingWeeks.module.css"
 import PostInfo from "@/components/PostInfo"
+import { getAllPostsMeta } from "@/hooks/postHooks"
 
-const Crochet = () => {
+const Crochet = async () => {
+  const posts = await getAllPostsMeta('crochet');
   return (
       <div className="main-page-container">
         <div className={styles["baking-page"]}>
           <p className="page-header">Crochet Projects</p>
           <div className={styles["baking-box"]}>
-            {[].length ? (
-              <PostInfo posts={[]} />
+            {posts.length ? (
+              <PostInfo posts={posts} />
             ) : (
               <p className="sub-header">
                 Sorry, there are no posts to display right now

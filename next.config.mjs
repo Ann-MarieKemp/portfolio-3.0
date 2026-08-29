@@ -4,11 +4,16 @@ import remarkFrontmatter from 'remark-mdx-frontmatter'
 
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
 const withMDX = createMDX({
   // Add markdown plugins here, as desired
-  extension: '/\.mdx?$/',
+  extension: /\.mdx?$/,
   remarkPlugins: [remarkFrontmatter],
   rehypePlugins: [],
 })

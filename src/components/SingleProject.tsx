@@ -9,15 +9,24 @@ interface SingleProjectProps {
   additionalText?: string[];
   linkText?: string;
   deployLink?: string;
-  last?: boolean;
 }
 
-const SingleProject = ({projectName, description, github, src, additionalText, linkText, deployLink, last }: SingleProjectProps) => {
+const SingleProject = ({projectName, description, github, src, additionalText, linkText, deployLink }: SingleProjectProps) => {
   return (
     <div className={styles['single-project-box']}>
       <div className={styles['link-title-align']}>
         <p className="sub-header-red-large">{projectName}</p>
         <div className={styles['project-link-container']}>
+          {deployLink ? (
+            <a
+              className={styles['project-github']}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={deployLink}
+            >
+              {linkText || "View"}
+            </a>
+          ) : null}
           {github ? (
             <a
               className={styles['project-github']}

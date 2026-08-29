@@ -25,9 +25,9 @@ const Navbar = () => {
           <Link className={styles["page-link"]} href="/Projects">
             Projects
           </Link>
-          {/* <Link className={styles["page-link"]} href="/Crafts">
+          <Link className={styles["page-link"]} href="/Crafts">
             Crafts
-          </Link> */}
+          </Link>
           <Link className={styles["page-link"]} href="/ContactInfo">
             Contact
           </Link>

@@ -1,53 +1,48 @@
-import React from "react"
-import Link from "next/link";
-import "@/styles/Posts.module.css"
+import type { ReactNode } from "react";
 import Image from "next/image";
-import ProjectLink from "@/components/ProjectLink"
+import ProjectLink from "@/components/ProjectLink";
+import Carousel from "@/components/Carousel";
+import styles from "@/styles/Posts.module.css";
+import type { PostFrontmatter } from "@/hooks/postHooks";
 
-const PostLayout = () => {
-  // let imageClass = "post-image"
-  // let newCategory = post.frontmatter.category
-  // let display = post.frontmatter.category
-  // if (post.frontmatter.category === "baking") {
-  //   newCategory = "BakingWeeks"
-  //   display = "All Bakes"
-  // } else if (post.frontmatter.category === "paper") {
-  //   newCategory = "PaperCrafts"
-  //   display = "All Paper/Other"
-  // } else if (post.frontmatter.category === "weaving") {
-  //   newCategory = "Weaving"
-  //   display = "All Weaving"
-  // } else if (post.frontmatter.category === "spinning") {
-  //   newCategory = "Spinning"
-  //   display = "All Spinning"
-  // } else if (post.frontmatter.category === "crochet") {
-  //   newCategory = "Crochet"
-  //   display = "All Crochet"
-  // } else if (post.frontmatter.category === "knitting") {
-  //   newCategory = "Knitting"
-  //   display = "All Knitting"
-  // }
-  // if (post.frontmatter.rotate && post.frontmatter.rotate === true) {
-  //   imageClass = "post-image-rotate"
-  // }
-  return (
-      <div className="main-page-container">
-        {/* <Image
-          // className={imageClass}
-          image={post.frontmatter.image.childImageSharp.fluid}
-        /> */}
-        {/* <MDXRenderer>{post.body}</MDXRenderer> */}
+const CATEGORY_DISPLAY: Record<string, { route: string; label: string }> = {
+  baking: { route: "BakingWeeks", label: "All Bakes" },
+  paper: { route: "PaperCrafts", label: "All Paper/Other" },
+  weaving: { route: "Weaving", label: "All Weaving" },
+  spinning: { route: "Spinning", label: "All Spinning" },
+  crochet: { route: "Crochet", label: "All Crochet" },
+  knitting: { route: "Knitting", label: "All Knitting" },
+};
 
-        {/* {post.frontmatter.images !== null && (
-          <Carousel images={post.frontmatter.images} />
-        )} */}
-        {/* <ProjectLink
-          className="category-link"
-          linkTo={`/${newCategory}`}
-          linkText={`Back to ${display}`}
-        /> */}
-      </div>
-  )
+interface PostLayoutProps {
+  meta: PostFrontmatter & { slug: string };
+  content: ReactNode;
 }
+
+const PostLayout = ({ meta, content }: PostLayoutProps) => {
+  const categoryInfo = CATEGORY_DISPLAY[meta.category];
+
+  return (
+    <div className="main-page-container">
+      <Image
+        src={meta.image}
+        alt={meta.title}
+        width={800}
+        height={600}
+        className={`${styles["post-image"]} ${meta.rotate ? styles["post-image-rotate"] : ""}`}
+      />
+      {content}
+      {meta.images && meta.images.length > 0 && (
+        <Carousel images={meta.images} altPrefix={meta.title} />
+      )}
+      {categoryInfo && (
+        <ProjectLink
+          linkTo={`/${categoryInfo.route}`}
+          linkText={`Back to ${categoryInfo.label}`}
+        />
+      )}
+    </div>
+  );
+};
 
 export default PostLayout;

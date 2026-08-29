@@ -1,0 +1,13 @@
+.craft-category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.craft-category-image {
+  margin: 0.5rem auto 0;
+  border: 4px solid #2e5270;
+  border-style: ridge;
+  object-fit: cover;
+}

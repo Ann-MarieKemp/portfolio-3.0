@@ -22,10 +22,10 @@ const Home =  () => {
             linkTo="/Projects"
             linkText="Projects"
           />
-          {/* <ProjectLink
+          <ProjectLink
             linkTo="/Crafts"
             linkText="Crafts"
-          /> */}
+          />
           <ProjectLink
             linkTo="/ContactInfo"
             linkText="Contact Info"

@@ -1,14 +1,26 @@
-import { getPostBySlug } from "@/hooks/postHooks";
+import { notFound } from "next/navigation";
+import { getPostBySlug, getAllSlugs, getCategoryForSlug } from "@/hooks/postHooks";
+import PostLayout from "@/components/PostLayout";
 
-const IndividualPost = async({ params }) => {
-  const slug = params.slug;
-  const post = await getPostBySlug(slug, 'weaving')
+export const generateStaticParams = () => {
+  return getAllSlugs().map(({ slug }) => ({ slug }));
+};
 
-
-
-
-  // const post = getPostBySlug()
-  return (<div>{post.content}</div>)
+interface IndividualPostProps {
+  params: { slug: string };
 }
+
+const IndividualPost = async ({ params }: IndividualPostProps) => {
+  const { slug } = params;
+  const category = getCategoryForSlug(slug);
+
+  if (!category) {
+    notFound();
+  }
+
+  const { meta, content } = await getPostBySlug(slug, category);
+
+  return <PostLayout meta={meta} content={content} />;
+};
 
 export default IndividualPost;

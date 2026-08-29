@@ -1,14 +1,18 @@
 import React from "react"
-// import resumeFile from "../constants/Ann-MarieKemp_Resume.pdf"
-// import { GatsbyImage } from "gatsby-plugin-image"
+import { FaFileDownload } from "react-icons/fa"
 
 const Resume = () => {
   return (
       <div className="main-page-container">
-        {/* <a className="sub-header resume" target="_blank" href={resumeFile}>
-          Download PDF version of Ann-Marie's Resume
-        </a> */}
-        {/* <GatsbyImage className="resume" image={resumePhoto} /> */}
+        <p className="page-header">Resume</p>
+        <a
+          className="sub-header resume"
+          target="_blank"
+          href="/Ann-MarieKemp_Resume.pdf"
+          rel="noopener noreferrer"
+        >
+          <FaFileDownload size="24" /> Download PDF version of Ann-Marie&apos;s Resume
+        </a>
       </div>
   )
 }

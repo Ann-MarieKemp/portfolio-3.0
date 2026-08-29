@@ -1,7 +1,11 @@
-.post-image.gatsby-image-wrapper {
+.post-image {
   margin-top: -2em;
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+.post-image-rotate {
+  transform: rotate(-90deg);
 }
 .post-text {
   color: #FFFFFF;

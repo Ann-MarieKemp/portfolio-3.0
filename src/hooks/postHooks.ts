@@ -2,13 +2,36 @@ import fs from 'fs';
 import path from 'path';
 import { compileMDX } from 'next-mdx-remote/rsc';
 
+export const POST_CATEGORIES = ['baking', 'weaving', 'crochet', 'knitting', 'paper', 'spinning'] as const;
+export type PostCategory = (typeof POST_CATEGORIES)[number];
+
+export interface PostFrontmatter {
+  title: string;
+  image: string;
+  images?: string[];
+  category: PostCategory;
+  author?: string;
+  id?: number;
+  rotate?: boolean;
+}
+
+const categoryRootPath = (category: string) =>
+  path.join(process.cwd(), 'src', 'app', 'PostPage', category);
+
+const listCategoryFiles = (category: string) => {
+  try {
+    return fs.readdirSync(categoryRootPath(category));
+  } catch {
+    return [];
+  }
+};
+
 export const getPostBySlug = async (slug: string, category: string) => {
   const realSlug = slug.replace(/\.mdx$/, '');
-  const categoryRoot = path.join(process.cwd(),'src', 'app', 'PostPage', category);
-  const filePath = path.join(categoryRoot, `${realSlug}.mdx`);
+  const filePath = path.join(categoryRootPath(category), `${realSlug}.mdx`);
   const fileContent = fs.readFileSync(filePath, { encoding: 'utf8'});
 
-  const { frontmatter, content} = await compileMDX({
+  const { frontmatter, content} = await compileMDX<PostFrontmatter>({
     source: fileContent,
     options: { parseFrontmatter: true }
   })
@@ -17,8 +40,7 @@ export const getPostBySlug = async (slug: string, category: string) => {
 }
 
 export const getAllPostsMeta = async (category: string) => {
-  const categoryRoot = path.join(process.cwd(),'src', 'app', 'PostPage', category);
-  const files = fs.readdirSync(categoryRoot);
+  const files = listCategoryFiles(category);
   const posts = []
 
   for (const file of files) {
@@ -28,3 +50,16 @@ export const getAllPostsMeta = async (category: string) => {
 
   return posts;
 }
+
+export const getAllSlugs = () => {
+  const slugs: { slug: string; category: PostCategory }[] = [];
+  for (const category of POST_CATEGORIES) {
+    for (const file of listCategoryFiles(category)) {
+      slugs.push({ slug: file.replace(/\.mdx$/, ''), category });
+    }
+  }
+  return slugs;
+}
+
+export const getCategoryForSlug = (slug: string) =>
+  getAllSlugs().find((entry) => entry.slug === slug)?.category;

@@ -11,7 +11,7 @@ const AboutMe = () => {
           </p>
           <br />
           <p>
-          Ann-Marie holds a degree in theatrical production design and technology from the University of Arizona with an emphasis in Sound Design. She began her theatrical career in New York City as a sound engineer and technician for theatrical productions working at some of the city's most famous off-broadway theaters including The Public Theater, Second Stage Theater and Playwrights Horizons. Highlights of her theatrical career included mixing the pre-broadway run of Fun Home at The Public, a revival of The Last Five Years directed by Jason Robert Brown at Second Stage, and working as a microphone technician at the Delacorte Theater in Central Park.
+          Ann-Marie holds a degree in theatrical production design and technology from the University of Arizona with an emphasis in Sound Design. She began her theatrical career in New York City as a sound engineer and technician for theatrical productions working at some of the city&apos;s most famous off-broadway theaters including The Public Theater, Second Stage Theater and Playwrights Horizons. Highlights of her theatrical career included mixing the pre-broadway run of Fun Home at The Public, a revival of The Last Five Years directed by Jason Robert Brown at Second Stage, and working as a microphone technician at the Delacorte Theater in Central Park.
           </p>
           <br />
           <p>
