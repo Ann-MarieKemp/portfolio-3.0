@@ -7,11 +7,11 @@ export const generateStaticParams = () => {
 };
 
 interface IndividualPostProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 const IndividualPost = async ({ params }: IndividualPostProps) => {
-  const { slug } = params;
+  const { slug } = await params;
   const category = getCategoryForSlug(slug);
 
   if (!category) {

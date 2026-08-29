@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import styles from "./AboutMe.module.css";
 import Carousel from "@/components/Carousel"
 
@@ -107,9 +108,9 @@ const AboutMe = () => {
 
           <p>
             Outside of engineering, I spend a lot of my time on crafts&mdash;baking, weaving, spinning, knitting, crochet, and more.{" "}
-            <a className={styles["crafts-link"]} href="/Crafts">
+            <Link className={styles["crafts-link"]} href="/Crafts">
               Take a look at what I&apos;ve made
-            </a>.
+            </Link>.
           </p>
 
           <p className={`sub-header ${styles["nyc-info"]}`}>Carnival the Cat</p>
