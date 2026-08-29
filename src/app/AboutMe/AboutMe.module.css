@@ -24,20 +24,20 @@
   text-align: center;
 }
 .crafts-link {
-  color: #A9A9A9;
+  color: var(--color-accent);
   align-self: center;
-  text-decoration: none;
-  font-size: 24px;
+  text-decoration: underline;
+  font-size: inherit;
 }
 .crafts-link-wrapper {
   display: flex;
   flex-direction: column;
-  border: 2px dotted #bbc9d9;
+  border: 2px dotted var(--color-border);
   padding: 0 10px 10px 10px;
   align-items: center;
 }
 .crafts-link:hover {
-  color: #bbc9d9;
+  color: var(--color-accent-hover);
 }
 .mainpage-project-link-container {
   display: flex;

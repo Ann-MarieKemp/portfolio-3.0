@@ -1,63 +1,95 @@
 .nav-bar-container {
   display: flex;
-  background-color: #557899;
-  box-shadow: 3px 1px 8px black;
-  border-radius: 3px;
-  height: 3.5rem;
+  background-color: var(--color-bg-elevated);
+  box-shadow: var(--shadow-card);
   align-items: center;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0 var(--space-4);
   justify-content: space-between;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 .page-link {
-  margin-right: 0.5em;
-  color: #FFFFFF;
-  margin-left: 0.5em;
+  margin-right: var(--space-2);
+  margin-left: var(--space-2);
+  color: var(--color-text);
   font-size: 18px;
   text-decoration: none;
   flex-shrink: 1;
 }
 .page-link:hover {
-  color: #bbc9d9;
+  color: var(--color-accent-vivid);
   text-decoration: underline;
-}
-.icon-img {
-  width: 38px;
-  height: 32px;
-}
-.site-icons {
-  color: #FFFFFF;
-  font-size: 26px;
-}
-.site-icons:hover {
-  color: #bbc9d9;
 }
 .icons-box {
   display: flex;
-  justify-content: space-evenly;
-  width: 300px;
-  margin-right: 7px;
+  align-items: center;
+  gap: var(--space-4);
 }
-.portfolio-photo.small {
-  height: 50px;
-  width: 50px;
+.icons-box a {
+  color: var(--color-text);
+}
+.icons-box a:hover {
+  color: var(--color-accent-vivid);
 }
 .nav-title-container {
   display: flex;
   align-items: center;
   justify-items: flex-start;
-  margin-left: 10px;
   font-size: 18px;
 }
 .links-and-icons-container {
   display: flex;
   align-items: center;
+  gap: var(--space-8);
+}
+.page-links {
+  display: flex;
+  align-items: center;
 }
 
 .name-spacing {
-  margin-left: 10px;
-  color: #FFFFFF
+  color: var(--color-text);
+  font-weight: 600;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .links-and-icons-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+    background-color: var(--color-bg-elevated);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-4);
+  }
+  .links-and-icons-container.menu-open {
+    display: flex;
+  }
+  .page-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  .icons-box {
+    gap: var(--space-6);
+  }
+}
