@@ -9,9 +9,10 @@ interface SingleProjectProps {
   additionalText?: string[];
   linkText?: string;
   deployLink?: string;
+  tags?: string[];
 }
 
-const SingleProject = ({projectName, description, github, src, additionalText, linkText, deployLink }: SingleProjectProps) => {
+const SingleProject = ({projectName, description, github, src, additionalText, linkText, deployLink, tags }: SingleProjectProps) => {
   return (
     <div className={styles['single-project-box']}>
       <div className={styles['link-title-align']}>
@@ -39,6 +40,13 @@ const SingleProject = ({projectName, description, github, src, additionalText, l
           ) : null}
         </div>
       </div>
+      {tags ? (
+        <div className={styles['project-tags']}>
+          {tags.map((tag) => (
+            <span className="tag-chip" key={tag}>{tag}</span>
+          ))}
+        </div>
+      ) : null}
       <p className={styles['project-github']}>{description}</p>
       {additionalText ? additionalText.map((description: string) => {
      return <p className={styles['project-github']} key={description}>- {description}</p>

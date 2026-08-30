@@ -6,6 +6,9 @@ import {
   dotEaterDescription,
   recipixDescription,
   twelveStepsDescription,
+  dotEaterTags,
+  recipixTags,
+  twelveStepsTags,
   centeneLeadDescription,
   centeneSeniorDescription,
   ibmBand07Description,
@@ -44,7 +47,7 @@ const Projects = () => {
       </div>
 
       <p className={`page-header ${styles['projects-header']}`}>Projects</p>
-      <div className={styles['all-projects-box']}>
+      <div className={styles['projects-grid']}>
         <SingleProject
           projectName={"Dot Eater"}
           description={dotEaterDescription}
@@ -52,16 +55,19 @@ const Projects = () => {
           linkText="Play The Game!"
           deployLink="http://dot-eater.herokuapp.com/"
           src="https://www.youtube.com/embed/3pskwXDw2nQ"
+          tags={dotEaterTags}
         />
         <SingleProject
           projectName={"Recipix"}
           github="https://github.com/Ann-MarieKemp/Recipix"
           description={recipixDescription}
           src="https://www.youtube.com/embed/oWoqoSWUoTA"
+          tags={recipixTags}
         />
         <SingleProject
           projectName={"12Steps.video"}
           description={twelveStepsDescription}
+          tags={twelveStepsTags}
         />
       </div>
     </>

@@ -13,6 +13,12 @@ export const rateYourRepDescription =
 export const twelveStepsDescription =
   "12Steps.video is a website that allows users to find virtual 12 step meeting listings during COVID lockdowns. Ann-Marie joined this project after its launch and contributed to the back end development by writing additional REST endpoints in Go to implement new features as well as writing SQL to update the PostgreSQL database directly. This was Ann-Marie's first project contributing to a code base in Golang."
 
+export const dotEaterTags = ["React", "Node"]
+
+export const recipixTags = ["React Native"]
+
+export const twelveStepsTags = ["Go", "PostgreSQL"]
+
   export const centeneLeadDescription = [
     "Lead cross-team accessibility implementation bringing the application into compliance with WCAG/508",
     "Implemented features for a micro-frontend architecture React Native health insurance application written in JavaScript/TypeScript supporting Android and iOS at scale",
