@@ -17,11 +17,11 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://a-mkemp.com"),
-  title: "Ann-Marie Kemp",
-  description: "Ann-Marie Kemp Portfolio Site",
+  title: "Ann-Marie Kemp — Mobile Engineering Lead",
+  description: "Ann-Marie Kemp — Mobile Engineering Lead specializing in React Native, mobile architecture, and accessibility.",
   openGraph: {
-    title: "Ann-Marie Kemp",
-    description: "Ann-Marie Kemp Portfolio Site",
+    title: "Ann-Marie Kemp — Mobile Engineering Lead",
+    description: "Ann-Marie Kemp — Mobile Engineering Lead specializing in React Native, mobile architecture, and accessibility.",
     url: "https://a-mkemp.com",
     type: "website",
   },
