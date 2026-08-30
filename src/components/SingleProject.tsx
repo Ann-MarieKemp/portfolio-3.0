@@ -40,7 +40,7 @@ const SingleProject = ({projectName, description, github, src, additionalText, l
           ) : null}
         </div>
       </div>
-      {tags ? (
+      {tags && tags.length > 0 ? (
         <div className={styles['project-tags']}>
           {tags.map((tag) => (
             <span className="tag-chip" key={tag}>{tag}</span>
