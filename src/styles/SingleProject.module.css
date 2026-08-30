@@ -14,16 +14,13 @@
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-2px);
 }
-@media only screen and (max-width: 375px) {
-  .video iframe {
-    flex: 1;
-    width: 1em;
-  }
-}
 .video {
-  display: flex;
+  display: block;
   margin-top: 1rem;
-  flex-shrink: 1;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 .project-link-container {

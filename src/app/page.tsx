@@ -4,16 +4,14 @@ import styles from "./page.module.css";
 import ProjectLink from "@/components/ProjectLink";
 import profileImage from '@/images/mainPortfolioImage.jpg'
 import Image from 'next/image';
-import { getAllPostsMeta } from "@/hooks/postHooks"
+import { getAllPostsMeta, CRAFT_CATEGORY_META } from "@/hooks/postHooks"
 
-const craftStripItems = [
-  { linkTo: "/BakingWeeks", linkText: "52 Weeks of Baking", alt: "baked goods", category: "baking" },
-  { linkTo: "/Weaving", linkText: "Weaving", alt: "woven blanket", category: "weaving" },
-  { linkTo: "/Crochet", linkText: "Crochet", alt: "crochet project", category: "crochet" },
-  { linkTo: "/Knitting", linkText: "Knitting", alt: "socks", category: "knitting" },
-  { linkTo: "/PaperCrafts", linkText: "Paper/Other", alt: "wedding table sign", category: "paper" },
-  { linkTo: "/Spinning", linkText: "Spinning", alt: "spinning wheel bobbin", category: "spinning" },
-]
+const craftStripCategories = ["baking", "weaving", "crochet", "knitting", "paper", "spinning"] as const
+
+const craftStripItems = craftStripCategories.map((category) => ({
+  category,
+  ...CRAFT_CATEGORY_META[category],
+}))
 
 const Home = async () => {
   const craftsWithThumbnails = await Promise.all(

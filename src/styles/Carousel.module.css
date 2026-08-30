@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: calc(var(--carousel-size) + 125px);
+  height: calc(var(--carousel-size) + 165px);
   margin-top: 1rem;
   position: relative;
   width: 100%;
@@ -79,6 +79,7 @@
   align-items: center;
   gap: var(--space-2);
   margin-top: var(--space-3);
+  flex-shrink: 0;
 }
 .dot:global(.tag-chip),
 .dot:global(.tag-chip-active) {
@@ -87,4 +88,9 @@
   padding: 0;
   border-radius: 50%;
   cursor: pointer;
+}
+.dot:global(.tag-chip) {
+  background-color: var(--color-text-muted);
+  border-color: var(--color-text-muted);
+  opacity: 0.45;
 }

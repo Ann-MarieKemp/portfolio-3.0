@@ -1,17 +1,15 @@
 import React from "react"
 import Image from "next/image"
 import ProjectLink from "@/components/ProjectLink"
-import { getAllPostsMeta } from "@/hooks/postHooks"
+import { getAllPostsMeta, CRAFT_CATEGORY_META } from "@/hooks/postHooks"
 import styles from "./Crafts.module.css"
 
-const craftArray = [
-  { linkTo: "/PaperCrafts", linkText: "Paper/Other", alt: "wedding table sign", category: "paper" },
-  { linkTo: "/BakingWeeks", linkText: "52 Weeks of Baking", alt: "baked goods", category: "baking" },
-  { linkTo: "/Knitting", linkText: "Knitting", alt: "socks", category: "knitting" },
-  { linkTo: "/Crochet", linkText: "Crochet", alt: "crochet project", category: "crochet" },
-  { linkTo: "/Spinning", linkText: "Spinning", alt: "spinning wheel bobbin", category: "spinning" },
-  { linkTo: "/Weaving", linkText: "Weaving", alt: "woven blanket", category: "weaving" },
-]
+const craftCategories = ["paper", "baking", "knitting", "crochet", "spinning", "weaving"] as const
+
+const craftArray = craftCategories.map((category) => ({
+  category,
+  ...CRAFT_CATEGORY_META[category],
+}))
 
 const Crafts = async () => {
   const craftsWithThumbnails = await Promise.all(

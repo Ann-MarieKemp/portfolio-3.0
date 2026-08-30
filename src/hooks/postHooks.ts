@@ -5,6 +5,15 @@ import { compileMDX } from 'next-mdx-remote/rsc';
 export const POST_CATEGORIES = ['baking', 'weaving', 'crochet', 'knitting', 'paper', 'spinning'] as const;
 export type PostCategory = (typeof POST_CATEGORIES)[number];
 
+export const CRAFT_CATEGORY_META: Record<PostCategory, { linkTo: string; linkText: string; alt: string }> = {
+  baking: { linkTo: '/BakingWeeks', linkText: '52 Weeks of Baking', alt: 'baked goods' },
+  weaving: { linkTo: '/Weaving', linkText: 'Weaving', alt: 'woven blanket' },
+  crochet: { linkTo: '/Crochet', linkText: 'Crochet', alt: 'crochet project' },
+  knitting: { linkTo: '/Knitting', linkText: 'Knitting', alt: 'socks' },
+  paper: { linkTo: '/PaperCrafts', linkText: 'Paper/Other', alt: 'wedding table sign' },
+  spinning: { linkTo: '/Spinning', linkText: 'Spinning', alt: 'spinning wheel bobbin' },
+};
+
 export interface PostFrontmatter {
   title: string;
   image: string;
