@@ -50,7 +50,7 @@
   display: flex;
   justify-content: space-around;
   margin-top: calc(var(--carousel-size) + 75px);
-  width: 300px;
+  width: var(--carousel-size);
 }
 
 .arrow-button {

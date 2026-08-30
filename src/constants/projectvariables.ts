@@ -19,6 +19,24 @@ export const recipixTags = ["React Native"]
 
 export const twelveStepsTags = ["Go", "PostgreSQL"]
 
+export const dotEaterBullets = [
+  "Built the base file structure and designed system architecture for the project in a team environment",
+  "Implemented initial rendering of tile maps, Pac-Man, and Ghost movement animations using Phaser3",
+  "Wrote logic to translate player movements and animations through Socket.io in a multiplayer environment",
+]
+
+export const twelveStepsBullets = [
+  "Implemented additional back-end logic for the meetings GET request to parse query strings using Go",
+  "Wrote an API endpoint to check if a resource exists in a PostgreSQL database using GORM and Go",
+  "Added a meeting-notes feature by writing endpoints and adding a table to the PostgreSQL database using SQL",
+  "Integrated an outside API call to retrieve time zone information when updating meeting information",
+]
+
+export const recipixBullets = [
+  "Designed the mobile application UI to interact with a machine learning API to detect text in photos",
+  "Developed with React Native, Cloud Firestore, and Firebase ML Kit to communicate with the Google Vision API",
+]
+
   export const centeneLeadDescription = [
     "Lead cross-team accessibility implementation bringing the application into compliance with WCAG/508",
     "Implemented features for a micro-frontend architecture React Native health insurance application written in JavaScript/TypeScript supporting Android and iOS at scale",

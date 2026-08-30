@@ -5,13 +5,10 @@ import Carousel from "@/components/Carousel";
 import styles from "@/styles/Posts.module.css";
 import type { PostFrontmatter } from "@/hooks/postHooks";
 
+// Baking is the only category with individual post pages — the other craft
+// categories show full post content directly on their category page.
 const CATEGORY_DISPLAY: Record<string, { route: string; label: string }> = {
   baking: { route: "BakingWeeks", label: "All Bakes" },
-  paper: { route: "PaperCrafts", label: "All Paper/Other" },
-  weaving: { route: "Weaving", label: "All Weaving" },
-  spinning: { route: "Spinning", label: "All Spinning" },
-  crochet: { route: "Crochet", label: "All Crochet" },
-  knitting: { route: "Knitting", label: "All Knitting" },
 };
 
 interface PostLayoutProps {
@@ -39,6 +36,7 @@ const PostLayout = ({ meta, content }: PostLayoutProps) => {
         <ProjectLink
           linkTo={`/${categoryInfo.route}`}
           linkText={`Back to ${categoryInfo.label}`}
+          variant="craft"
         />
       )}
     </div>

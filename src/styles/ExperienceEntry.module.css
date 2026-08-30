@@ -10,6 +10,7 @@
 .experience-entry::before {
   content: "";
   position: absolute;
+  box-sizing: border-box;
   left: -7px;
   top: 4px;
   width: 12px;

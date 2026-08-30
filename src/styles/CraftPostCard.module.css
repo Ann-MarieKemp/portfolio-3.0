@@ -1,0 +1,29 @@
+.craft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: var(--space-6) auto 0;
+  padding: 0 var(--space-4);
+}
+
+.craft-post-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-elevated);
+  box-shadow: var(--shadow-card);
+}
+
+.craft-post-title {
+  margin-top: var(--space-3);
+  text-align: left;
+}
+
+.craft-post-card :global(.post-text) {
+  margin-top: var(--space-2);
+  font-size: 16px;
+}

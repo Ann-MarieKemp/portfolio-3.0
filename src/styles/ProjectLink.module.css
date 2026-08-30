@@ -1,3 +1,7 @@
+.link-wrapper:global(.category-link):hover {
+  text-decoration: none;
+}
+
 .link-container {
   width: 250px;
   min-height: 44px;
@@ -18,10 +22,17 @@
   color: var(--color-accent);
   transition: box-shadow 150ms ease, transform 150ms ease, background-color 150ms ease, color 150ms ease;
 }
-.link-container:hover {
+a.link-container:hover {
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-1px);
   background-color: var(--color-accent);
+  color: var(--color-bg-elevated);
+}
+.link-container.craft {
+  color: var(--color-accent-warm);
+}
+a.link-container.craft:hover {
+  background-color: var(--color-accent-warm);
   color: var(--color-bg-elevated);
 }
 

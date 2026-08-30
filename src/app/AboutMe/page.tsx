@@ -1,7 +1,14 @@
 import React from "react"
 import Link from "next/link"
+import type { Metadata } from "next"
 import styles from "./AboutMe.module.css";
 import Carousel from "@/components/Carousel"
+import { getMediumArticles } from "@/hooks/mediumHooks"
+
+export const metadata: Metadata = {
+  title: "About — Ann-Marie Kemp",
+  description: "Mobile Engineering Lead specializing in React Native, mobile architecture, and accessibility — background, career history, and education.",
+}
 
 const kittyPhotos = [
   "/images/kitty/IMG_0717.jpg",
@@ -16,10 +23,12 @@ const kittyPhotos = [
   "/images/kitty/image000000.jpg",
 ]
 
-const AboutMe = () => {
+const AboutMe = async () => {
+  const articles = await getMediumArticles();
+
   return (
       <div className="main-page-container">
-        <p className="page-header">Hi, I&apos;m Ann-Marie 👋</p>
+        <h1 className="page-header">Hi, I&apos;m Ann-Marie 👋</h1>
         <div className="description-text">
           <p>
             I&apos;m a <strong>Lead Application Development Engineer at Centene</strong> specializing in mobile application development with <strong>React Native, TypeScript, and JavaScript</strong>. I work on large-scale healthcare applications, with a focus on mobile architecture, accessibility, application modernization, and building maintainable systems that can evolve across multiple products and teams.
@@ -34,7 +43,7 @@ const AboutMe = () => {
           </p>
           <br />
 
-          <p className="sub-header">Previously</p>
+          <h2 className="sub-header">Previously</h2>
           <p>
             Before joining Centene, I was a <strong>Software Developer in IBM&apos;s CIO organization</strong>, where I built internal applications designed to improve employee productivity.
           </p>
@@ -48,7 +57,7 @@ const AboutMe = () => {
           </p>
           <br />
 
-          <p className="sub-header">From Sound Engineering to Software Engineering</p>
+          <h2 className="sub-header">From Sound Engineering to Software Engineering</h2>
           <p>
             My route into software engineering was not a traditional one.
           </p>
@@ -66,39 +75,14 @@ const AboutMe = () => {
           </p>
           <br />
           <p>
-            That background still influences how I approach engineering today: complex systems, live production, troubleshooting under pressure, communication across disciplines, and making sure everything works when it actually matters.
+            That background still influences how I approach engineering today: complex systems, live production, troubleshooting under pressure, communication across disciplines, and making sure everything works when it actually matters.{" "}
+            <Link className={styles["inline-link"]} href="/EarlyCareer">
+              See the full timeline
+            </Link>.
           </p>
           <br />
 
-          <p className="sub-header">Education &amp; Certifications</p>
-          <p>
-            M.S. Computer Science, University of Colorado Boulder &mdash; in progress, expected 2028<br />
-            <em>Relevant coursework: Network Systems, Object-Oriented Analysis &amp; Design</em>
-          </p>
-          <br />
-          <p>
-            Software Engineering, The Grace Hopper Program at Fullstack Academy of Code &mdash; April 2020
-          </p>
-          <br />
-          <p>
-            Coursework in Android Development &amp; Mathematics, Rio Salado Community College
-          </p>
-          <br />
-          <p>
-            B.F.A. Theatrical Production Design and Technology, University of Arizona &mdash; December 2008
-          </p>
-          <br />
-          <p>
-            <a href="https://www.credly.com/badges/db9d6c92-b1c6-4e52-97a7-166a92e6f4fa" target="_blank" rel="noopener noreferrer">
-              IBM Developer Profession &mdash; Level 2 Experienced Credential
-            </a><br />
-            <a href="https://www.credly.com/badges/68d4a990-ccf3-42fd-a3ef-a0e481898a54/public_url" target="_blank" rel="noopener noreferrer">
-              IBM Blue Core Coach
-            </a>
-          </p>
-          <br />
-
-          <p className="sub-header">What I&apos;m Working On</p>
+          <h2 className="sub-header">What I&apos;m Working On</h2>
           <p>These days I&apos;m particularly interested in:</p>
           <p>
             React Native and native mobile architecture<br />
@@ -114,17 +98,31 @@ const AboutMe = () => {
           </p>
           <br />
           <p>
-            I&apos;m also continuing my computer science education while expanding deeper into algorithms, systems, machine learning, and software architecture.
+            I&apos;m also continuing my computer science education while expanding deeper into algorithms, systems, machine learning, and software architecture.{" "}
+            <Link className={styles["inline-link"]} href="/Education">
+              See my education and certifications
+            </Link>.
           </p>
           <br />
 
-          <p className="sub-header">Writing</p>
+          <h2 className="sub-header">Writing</h2>
           <p>
             I occasionally write about software development and things I&apos;ve learned along the way.
           </p>
+          {articles.length > 0 && (
+            <ul className={styles['medium-articles']}>
+              {articles.map((article) => (
+                <li key={article.link}>
+                  <a href={article.link} target="_blank" rel="noopener noreferrer">
+                    {article.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
           <p>
             <a href="https://medium.com/@amkemp" target="_blank" rel="noopener noreferrer">
-              Medium
+              See all posts on Medium
             </a>
           </p>
           <br />
@@ -136,12 +134,12 @@ const AboutMe = () => {
 
           <p>
             Outside of engineering, I spend a lot of my time on crafts&mdash;baking, weaving, spinning, knitting, crochet, and more.{" "}
-            <Link className={styles["crafts-link"]} href="/Crafts">
+            <Link className={styles["inline-link"]} href="/Crafts">
               Take a look at what I&apos;ve made
             </Link>.
           </p>
 
-          <p className={`sub-header ${styles["nyc-info"]}`}>Carnival the Cat</p>
+          <h2 className={`sub-header ${styles["nyc-info"]}`}>Carnival the Cat</h2>
           <Carousel images={kittyPhotos} altPrefix="Carnival the cat" />
         </div>
       </div>

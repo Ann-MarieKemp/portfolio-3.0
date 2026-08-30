@@ -9,11 +9,17 @@
   background-color: var(--color-bg-elevated);
   box-shadow: var(--shadow-card);
   height: 100%;
-  transition: box-shadow 150ms ease, transform 150ms ease;
+  transition: box-shadow 150ms ease, transform 150ms ease, border-color 150ms ease;
 }
 .post-preview-container:hover {
   box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-accent-warm);
+  background-color: var(--color-accent-warm);
   transform: translateY(-2px);
+}
+.post-preview-container:hover :global(.category-link) {
+  color: var(--color-bg-elevated);
+  text-decoration: none;
 }
 .weeks-of-baking-container {
   width: 100%;

@@ -46,6 +46,15 @@ const Navbar = () => {
           <Link className={styles["page-link"]} href="/AboutMe" onClick={() => setMenuOpen(false)}>
             About
           </Link>
+          <Link className={styles["page-link"]} href="/Resume" onClick={() => setMenuOpen(false)}>
+            Experience
+          </Link>
+          <Link className={styles["page-link"]} href="/Education" onClick={() => setMenuOpen(false)}>
+            Education
+          </Link>
+          <Link className={styles["page-link"]} href="/EarlyCareer" onClick={() => setMenuOpen(false)}>
+            Early Career
+          </Link>
           <Link className={styles["page-link"]} href="/Projects" onClick={() => setMenuOpen(false)}>
             Projects
           </Link>

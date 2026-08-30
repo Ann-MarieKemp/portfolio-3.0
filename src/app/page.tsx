@@ -1,27 +1,10 @@
 import React from "react"
-import Link from "next/link"
 import styles from "./page.module.css";
 import ProjectLink from "@/components/ProjectLink";
 import profileImage from '@/images/mainPortfolioImage.jpg'
 import Image from 'next/image';
-import { getAllPostsMeta, CRAFT_CATEGORY_META } from "@/hooks/postHooks"
 
-const craftStripCategories = ["baking", "weaving", "crochet", "knitting", "paper", "spinning"] as const
-
-const craftStripItems = craftStripCategories.map((category) => ({
-  category,
-  ...CRAFT_CATEGORY_META[category],
-}))
-
-const Home = async () => {
-  const craftsWithThumbnails = await Promise.all(
-    craftStripItems.map(async (craft) => {
-      const posts = await getAllPostsMeta(craft.category);
-      const thumbnail = posts[0]?.image as string | undefined;
-      return { ...craft, thumbnail };
-    })
-  );
-
+const Home = () => {
   return (
     <div className="main-page-container" >
       <Image src={profileImage} alt="Picture of Ann-Marie Kemp" height="315" width="315" className="portfolio-photo"/>
@@ -34,6 +17,18 @@ const Home = async () => {
           <ProjectLink
             linkTo="/AboutMe"
             linkText="About Ann-Marie"
+          />
+          <ProjectLink
+            linkTo="/Resume"
+            linkText="Experience"
+          />
+          <ProjectLink
+            linkTo="/Education"
+            linkText="Education"
+          />
+          <ProjectLink
+            linkTo="/EarlyCareer"
+            linkText="Early Career"
           />
           <ProjectLink
             linkTo="/Projects"
@@ -49,25 +44,6 @@ const Home = async () => {
           />
         </div>
       </div>
-      <div className={styles['craft-strip']}>
-        {craftsWithThumbnails.map((craft) => (
-          craft.thumbnail ? (
-            <Link key={craft.linkTo} href={craft.linkTo} className={styles['craft-strip-item']}>
-              <Image
-                src={craft.thumbnail}
-                alt={craft.alt}
-                width={80}
-                height={80}
-                className={styles['craft-strip-image']}
-              />
-              <span className={styles['craft-strip-label']}>{craft.linkText}</span>
-            </Link>
-          ) : null
-        ))}
-      </div>
-      <Link href="/Crafts" className={styles['see-all-crafts-link']}>
-        See all crafts
-      </Link>
     </div>
   )
 }

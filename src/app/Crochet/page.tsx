@@ -1,29 +1,17 @@
-import React from "react"
-import styles from "@/styles/BakingWeeks.module.css"
-import PostInfo from "@/components/PostInfo"
-import { getAllPostsMeta } from "@/hooks/postHooks"
+import type { Metadata } from "next"
+import CraftCategoryContent from "@/components/CraftCategoryContent"
 
-const Crochet = async () => {
-  const posts = await getAllPostsMeta('crochet');
-  return (
-      <div className="main-page-container">
-        <div className={styles["baking-page"]}>
-          <p className="page-header">Crochet Projects</p>
-          <p className={`description-text ${styles['baking']}`}>
-            Ann-Marie&apos;s crochet projects, ranging from holiday decor and amigurumi characters to a full-sized Harry Potter&ndash;themed blanket.
-          </p>
-          <div className={styles["baking-box"]}>
-            {posts.length ? (
-              <PostInfo posts={posts} />
-            ) : (
-              <p className="sub-header">
-                Sorry, there are no posts to display right now
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-  )
+export const metadata: Metadata = {
+  title: "Crochet Projects — Ann-Marie Kemp",
+  description: "Ann-Marie Kemp's crochet projects, from holiday decor and amigurumi to a full-sized Harry Potter–themed blanket.",
 }
+
+const Crochet = () => (
+  <CraftCategoryContent
+    category="crochet"
+    title="Crochet Projects"
+    description="Ann-Marie's crochet projects, ranging from holiday decor and amigurumi characters to a full-sized Harry Potter–themed blanket."
+  />
+)
 
 export default Crochet

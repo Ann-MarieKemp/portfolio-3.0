@@ -48,21 +48,24 @@ export const getPostBySlug = async (slug: string, category: string) => {
   return { meta: {...frontmatter, slug: realSlug }, content }
 }
 
-export const getAllPostsMeta = async (category: string) => {
+export const getAllPosts = async (category: string) => {
   const files = listCategoryFiles(category);
-  const posts = []
-
-  for (const file of files) {
-    const { meta } =  await getPostBySlug(file, category);
-    posts.push(meta)
-  }
-
-  return posts;
+  const posts = await Promise.all(files.map((file) => getPostBySlug(file, category)));
+  return posts.sort((a, b) => (a.meta.id ?? 0) - (b.meta.id ?? 0));
 }
+
+export const getAllPostsMeta = async (category: string) => {
+  const posts = await getAllPosts(category);
+  return posts.map((post) => post.meta);
+}
+
+// Only baking has individual post pages ("/[slug]") — the other craft
+// categories show full post content directly on their category page.
+const DETAIL_PAGE_CATEGORIES: PostCategory[] = ['baking'];
 
 export const getAllSlugs = () => {
   const slugs: { slug: string; category: PostCategory }[] = [];
-  for (const category of POST_CATEGORIES) {
+  for (const category of DETAIL_PAGE_CATEGORIES) {
     for (const file of listCategoryFiles(category)) {
       slugs.push({ slug: file.replace(/\.mdx$/, ''), category });
     }

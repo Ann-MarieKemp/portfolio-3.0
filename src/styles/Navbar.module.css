@@ -43,6 +43,9 @@
   font-size: 18px;
   text-decoration: none;
 }
+.nav-title-container:hover .name-spacing {
+  color: var(--color-accent-vivid);
+}
 .logo {
   border-radius: var(--radius-sm);
   flex-shrink: 0;
@@ -68,6 +71,9 @@
   color: var(--color-text);
   cursor: pointer;
   padding: var(--space-2);
+}
+.menu-toggle:hover {
+  color: var(--color-accent-vivid);
 }
 
 @media (max-width: 768px) {

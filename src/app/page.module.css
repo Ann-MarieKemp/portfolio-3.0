@@ -1,6 +1,6 @@
 .about-me-tag {
   display: flex;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 1em;
   margin-top: 1em;
 }
@@ -31,48 +31,4 @@
   100% {
     opacity: 1;
   }
-}
-.craft-strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-4);
-  margin-top: var(--space-8);
-  width: 100%;
-  max-width: var(--page-max-width);
-  padding: 0 var(--space-4);
-}
-.craft-strip-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-1);
-  width: 80px;
-  text-decoration: none;
-}
-.craft-strip-image {
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
-  object-fit: cover;
-  transition: border-color 150ms ease;
-}
-.craft-strip-item:hover .craft-strip-image {
-  border-color: var(--color-accent-warm);
-}
-.craft-strip-label {
-  font-size: 13px;
-  text-align: center;
-  color: var(--color-accent-warm);
-}
-.craft-strip-item:hover .craft-strip-label {
-  color: var(--color-accent-warm-hover);
-}
-.see-all-crafts-link {
-  margin-top: var(--space-4);
-  display: block;
-  text-align: center;
-  color: var(--color-accent-warm);
-}
-.see-all-crafts-link:hover {
-  color: var(--color-accent-warm-hover);
 }

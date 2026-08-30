@@ -1,6 +1,6 @@
 import React from "react"
+import type { Metadata } from "next"
 import SingleProject from "@/components/SingleProject"
-import ExperienceEntry from "@/components/ExperienceEntry"
 import styles from "./Projects.module.css"
 import {
   dotEaterDescription,
@@ -9,51 +9,26 @@ import {
   dotEaterTags,
   recipixTags,
   twelveStepsTags,
-  centeneLeadDescription,
-  centeneSeniorDescription,
-  ibmBand07Description,
-  ibmBand06Description
+  dotEaterBullets,
+  twelveStepsBullets,
+  recipixBullets,
 } from "@/constants/projectvariables"
+
+export const metadata: Metadata = {
+  title: "Projects — Ann-Marie Kemp",
+  description: "Personal software projects built by Ann-Marie Kemp.",
+}
 
 const Projects = () => {
   return (
-    <>
-      <p className="page-header">Experience</p>
-      <div className={styles['experience-section']}>
-        <ExperienceEntry
-          role="Lead Application Development Engineer"
-          company="Centene"
-          dates="Sept 2025 - Present"
-          bullets={centeneLeadDescription}
-        />
-        <ExperienceEntry
-          role="Senior Application Development Engineer"
-          company="Centene / Apex Systems"
-          dates="Jan 2025 - Sept 2025"
-          bullets={centeneSeniorDescription}
-        />
-        <ExperienceEntry
-          role="Software Developer, Band 07"
-          company="IBM"
-          dates="Oct 2021 - Jan 2025"
-          bullets={ibmBand07Description}
-        />
-        <ExperienceEntry
-          role="Software Developer, Band 06"
-          company="IBM"
-          dates="Aug 2020 - Oct 2021"
-          bullets={ibmBand06Description}
-        />
-      </div>
-
-      <p className={`page-header ${styles['projects-header']}`}>Projects</p>
+    <div className="main-page-container">
+      <h1 className="page-header">Projects</h1>
       <div className={styles['projects-grid']}>
         <SingleProject
           projectName={"Dot Eater"}
           description={dotEaterDescription}
+          bullets={dotEaterBullets}
           github={"https://github.com/Team-Blade/Capstone-Project"}
-          linkText="Play The Game!"
-          deployLink="http://dot-eater.herokuapp.com/"
           src="https://www.youtube.com/embed/3pskwXDw2nQ"
           tags={dotEaterTags}
         />
@@ -61,16 +36,20 @@ const Projects = () => {
           projectName={"Recipix"}
           github="https://github.com/Ann-MarieKemp/Recipix"
           description={recipixDescription}
+          bullets={recipixBullets}
           src="https://www.youtube.com/embed/oWoqoSWUoTA"
           tags={recipixTags}
         />
         <SingleProject
           projectName={"12Steps.video"}
           description={twelveStepsDescription}
+          bullets={twelveStepsBullets}
+          deployLink="https://www.12steps.video/en/"
+          linkText="Visit Site"
           tags={twelveStepsTags}
         />
       </div>
-    </>
+    </div>
   )
 }
 

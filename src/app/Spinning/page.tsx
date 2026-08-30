@@ -1,30 +1,17 @@
-import React from "react"
-import styles from "@/styles/BakingWeeks.module.css"
-import PostInfo from "@/components/PostInfo"
-import { getAllPostsMeta } from "@/hooks/postHooks"
+import type { Metadata } from "next"
+import CraftCategoryContent from "@/components/CraftCategoryContent"
 
-const Spinning = async () => {
-  const posts = await getAllPostsMeta('spinning');
-  return (
-      <div className="main-page-container">
-        <div className={styles["baking-page"]}>
-          <p className="page-header">Spinning Projects</p>
-          <p className={`description-text ${styles['baking']}`}>
-            Ann-Marie spins her own yarn on a spinning wheel, turning raw and prepared fiber into yarn she can knit, crochet, or weave with.
-          </p>
-
-          <div className={styles["baking-box"]}>
-            {posts.length ? (
-              <PostInfo posts={posts} />
-            ) : (
-              <p className="sub-header">
-                Sorry, there are no posts to display right now
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-  )
+export const metadata: Metadata = {
+  title: "Spinning Projects — Ann-Marie Kemp",
+  description: "Ann-Marie Kemp spins her own yarn, turning raw and prepared fiber into yarn she can knit, crochet, or weave with.",
 }
+
+const Spinning = () => (
+  <CraftCategoryContent
+    category="spinning"
+    title="Spinning Projects"
+    description="Ann-Marie spins her own yarn on a spinning wheel, turning raw and prepared fiber into yarn she can knit, crochet, or weave with."
+  />
+)
 
 export default Spinning

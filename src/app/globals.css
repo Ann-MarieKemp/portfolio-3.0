@@ -78,7 +78,7 @@
 html {
   background-color: var(--color-bg);
 }
-h1 {
+h1, h2, h3 {
   color: var(--color-text);
   word-wrap: break-word;
   font-family: var(--font-sans);
@@ -90,6 +90,11 @@ a {
 a:visited {
   color: var(--color-accent);
 }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent-warm);
+  outline-offset: 2px;
+}
 p {
   color: var(--color-text);
   line-height: 1.75;
@@ -97,15 +102,9 @@ p {
   font-family: var(--font-sans);
 }
 .page-header {
-  font-size: 50px;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   text-align: center;
   font-weight: 600;
-}
-.drop-caps {
-  font-size: 3.5em;
-  float: left;
-  line-height: 1;
-  height: 50px;
 }
 .description-text {
   max-width: var(--content-max-width);
@@ -119,8 +118,9 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5rem;
-  margin-top: 1.5rem;
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: var(--space-16) auto 5rem;
   padding: 0 var(--space-4);
 }
 
@@ -130,17 +130,14 @@ a:hover {
 .sub-header {
   margin-top: var(--space-4);
   margin-bottom: var(--space-2);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--color-text);
 }
-.sub-header-red {
-  color: var(--color-accent);
-  font-size: 16px;
-}
 .sub-header-red-large {
   color: var(--color-accent);
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 600;
 }
 .category-link {
   color: var(--color-accent);
@@ -151,6 +148,26 @@ a:hover {
   color: var(--color-accent-hover);
   text-decoration: underline;
 }
+.category-link.baking {
+  padding: 5px;
+  margin: 1em auto;
+}
+.category-link.baking:hover {
+  color: var(--color-accent-hover);
+}
+.post-text {
+  color: var(--color-text);
+  width: 100%;
+  max-width: var(--content-max-width);
+  font-size: 18px;
+}
+.sub-header-cream {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-accent-warm);
+}
 .portfolio-photo {
   border-radius: 50%;
   box-shadow: var(--shadow-card);
@@ -158,7 +175,7 @@ a:hover {
 }
 .main-page-header {
   margin-top: .5rem;
-  font-size: 50px;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   text-align: center;
   font-weight: 600;
 }
@@ -169,12 +186,8 @@ a:hover {
 
   width: 50vw;
 }
-.page-header.crafts {
-  margin-top: 3em;
-}
 .sub-header.resume {
   margin-top: 1em;
-  margin-bottom: -1em;
   color: var(--color-text);
 }
 .sub-header.resume:hover {

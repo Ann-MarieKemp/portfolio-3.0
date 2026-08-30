@@ -1,8 +1,14 @@
 import React from "react"
 import Image from "next/image"
+import type { Metadata } from "next"
 import ProjectLink from "@/components/ProjectLink"
 import { getAllPostsMeta, CRAFT_CATEGORY_META } from "@/hooks/postHooks"
 import styles from "./Crafts.module.css"
+
+export const metadata: Metadata = {
+  title: "Craft Projects — Ann-Marie Kemp",
+  description: "Baking, weaving, crochet, knitting, spinning, and paper craft projects made by Ann-Marie Kemp.",
+}
 
 const craftCategories = ["paper", "baking", "knitting", "crochet", "spinning", "weaving"] as const
 
@@ -22,7 +28,7 @@ const Crafts = async () => {
 
   return (
       <div className="main-page-container">
-        <p className="page-header crafts">Craft Projects</p>
+        <h1 className="page-header">Craft Projects</h1>
         <div className="mainpage-project-link-container">
           <div className="craft-category-div">
             {craftsWithThumbnails.map((craft) => (
@@ -30,6 +36,7 @@ const Crafts = async () => {
                 <ProjectLink
                   linkTo={craft.linkTo}
                   linkText={craft.linkText}
+                  variant="craft"
                 />
                 {craft.thumbnail && (
                   <Image
