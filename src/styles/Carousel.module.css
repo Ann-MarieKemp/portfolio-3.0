@@ -36,11 +36,13 @@
 }
 
 .opacity-half {
-  visibility: hidden;
+  visibility: visible;
+  opacity: 0.45;
 }
 
 .opacity-full {
   visibility: visible;
+  opacity: 1;
   transform: scale(1);
 }
 
@@ -69,4 +71,20 @@
 .arrow-button:disabled {
   opacity: 0.4;
   cursor: default;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.dot:global(.tag-chip),
+.dot:global(.tag-chip-active) {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
 }

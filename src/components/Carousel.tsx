@@ -48,6 +48,17 @@ const Carousel = ({ images, altPrefix = "Photo" }: CarouselProps) => {
           disabled={imageIdx === images.length - 1}
         />
       </div>
+      <div className={styles["dot-container"]}>
+        {images.map((image, index) => (
+          <button
+            key={image}
+            type="button"
+            className={`${styles.dot} ${index === imageIdx ? "tag-chip-active" : "tag-chip"}`}
+            aria-label={`Go to photo ${index + 1}`}
+            onClick={() => setImageIdx(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 };
