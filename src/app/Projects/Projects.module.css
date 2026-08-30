@@ -8,3 +8,14 @@
   margin: var(--space-6) auto 0;
   padding: 0 var(--space-4);
 }
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin: var(--space-6) auto 0;
+  padding: 0 var(--space-4);
+}
+.projects-header {
+  margin-top: var(--space-16);
+}

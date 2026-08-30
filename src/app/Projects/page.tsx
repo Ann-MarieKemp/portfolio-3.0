@@ -1,5 +1,6 @@
 import React from "react"
 import SingleProject from "@/components/SingleProject"
+import ExperienceEntry from "@/components/ExperienceEntry"
 import styles from "./Projects.module.css"
 import {
   dotEaterDescription,
@@ -14,25 +15,37 @@ import {
 const Projects = () => {
   return (
     <>
-      <p className="page-header">Projects </p>
+      <p className="page-header">Experience</p>
+      <div className={styles['experience-section']}>
+        <ExperienceEntry
+          role="Lead Application Development Engineer"
+          company="Centene"
+          dates="Sept 2025 - Present"
+          bullets={centeneLeadDescription}
+        />
+        <ExperienceEntry
+          role="Senior Application Development Engineer"
+          company="Centene / Apex Systems"
+          dates="Jan 2025 - Sept 2025"
+          bullets={centeneSeniorDescription}
+        />
+        <ExperienceEntry
+          role="Software Developer, Band 07"
+          company="IBM"
+          dates="Oct 2021 - Jan 2025"
+          bullets={ibmBand07Description}
+        />
+        <ExperienceEntry
+          role="Software Developer, Band 06"
+          company="IBM"
+          dates="Aug 2020 - Oct 2021"
+          bullets={ibmBand06Description}
+        />
+      </div>
+
+      <p className={`page-header ${styles['projects-header']}`}>Projects</p>
       <div className={styles['all-projects-box']}>
-      <SingleProject
-          projectName={"Centene - Lead Application Development Engineer (Sept 2025 - Present)"}
-          additionalText={centeneLeadDescription}
-        />
-      <SingleProject
-          projectName={"Centene / Apex Systems - Senior Application Development Engineer (Jan 2025 - Sept 2025)"}
-          additionalText={centeneSeniorDescription}
-        />
-      <SingleProject
-          projectName={"IBM - Software Developer, Band 07 (Oct 2021 - Jan 2025)"}
-          additionalText={ibmBand07Description}
-        />
         <SingleProject
-          projectName={"IBM - Software Developer, Band 06 (Aug 2020 - Oct 2021)"}
-          additionalText={ibmBand06Description}
-        />
-      <SingleProject
           projectName={"Dot Eater"}
           description={dotEaterDescription}
           github={"https://github.com/Team-Blade/Capstone-Project"}
@@ -51,7 +64,7 @@ const Projects = () => {
           description={twelveStepsDescription}
         />
       </div>
-      </>
+    </>
   )
 }
 
