@@ -1,24 +1,39 @@
+.link-wrapper:global(.category-link):hover {
+  text-decoration: none;
+}
+
 .link-container {
   width: 250px;
-  height: 30px;
-  border-radius: 3px;
+  min-height: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
   display: flex;
   justify-content: center;
   word-wrap: break-word;
   text-align: center;
   align-content: center;
+  align-items: center;
   margin-top: 1.5em;
-  font-size: 20px;
-  padding: 0 10px;
+  font-size: 18px;
+  padding: var(--space-2) var(--space-3);
   flex-wrap: wrap;
-  box-shadow: -0.5px 0.5px 3px 1px #A9A9A9;
-  color: #557899;
+  background-color: var(--color-bg-elevated);
+  box-shadow: var(--shadow-card);
+  color: var(--color-accent);
+  transition: box-shadow 150ms ease, transform 150ms ease, background-color 150ms ease, color 150ms ease;
 }
-.link-container:hover {
-  border: 1px solid #FFFFFF;
-  box-shadow: none;
-  background-color: #557899;
-  color: #FFFFFF
+a.link-container:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+  background-color: var(--color-accent);
+  color: var(--color-bg-elevated);
+}
+.link-container.craft {
+  color: var(--color-accent-warm);
+}
+a.link-container.craft:hover {
+  background-color: var(--color-accent-warm);
+  color: var(--color-bg-elevated);
 }
 
 .fade-in {

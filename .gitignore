@@ -28,6 +28,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# superpowers scratch workspace
+.superpowers/
+
 # vercel
 .vercel
 

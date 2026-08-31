@@ -13,44 +13,56 @@ export const rateYourRepDescription =
 export const twelveStepsDescription =
   "12Steps.video is a website that allows users to find virtual 12 step meeting listings during COVID lockdowns. Ann-Marie joined this project after its launch and contributed to the back end development by writing additional REST endpoints in Go to implement new features as well as writing SQL to update the PostgreSQL database directly. This was Ann-Marie's first project contributing to a code base in Golang."
 
-  export const IBMProjectOverview = "All projects Ann-Marie builds for IBM are intended for internal use only and therefore can't be described in detail here. Below are some non-specific examples of the type of contributions she has made in her time at the company."
+export const dotEaterTags = ["React", "Node", "Phaser 3"]
 
-  export const IBMProjectDescriptions = [
-    "Contributed features and test coverage to a real time event driven notification service leveraging Kafka and Cassandra",
-    "Assisted in the building and maintaining of a RESTful service storing the setting preferences for hundreds of thousands of IBMers across multiple application tenants in a Cassandra database.",
-    "Maintained a GraphQL layer combining resolvers for more than 20 RESTful and gRPC microservices to service a unified UI experience.",
-    "Architected a service to allow offline access to enterprise directory information that has shared use between Swift and React Native applications.",
-    "Acted as technical lead for a team building an internal React Native application.",
-    "Assisted teammates to troubleshoot complex technical problems."
+export const recipixTags = ["React Native"]
+
+export const twelveStepsTags = ["Go", "PostgreSQL"]
+
+export const dotEaterBullets = [
+  "Built the base file structure and designed system architecture for the project in a team environment",
+  "Implemented initial rendering of tile maps, Pac-Man, and Ghost movement animations using Phaser3",
+  "Wrote logic to translate player movements and animations through Socket.io in a multiplayer environment",
+]
+
+export const twelveStepsBullets = [
+  "Implemented additional back-end logic for the meetings GET request to parse query strings using Go",
+  "Wrote an API endpoint to check if a resource exists in a PostgreSQL database using GORM and Go",
+  "Added a meeting-notes feature by writing endpoints and adding a table to the PostgreSQL database using SQL",
+  "Integrated an outside API call to retrieve time zone information when updating meeting information",
+]
+
+export const recipixBullets = [
+  "Designed the mobile application UI to interact with a machine learning API to detect text in photos",
+  "Developed with React Native, Cloud Firestore, and Firebase ML Kit to communicate with the Google Vision API",
+]
+
+  export const centeneLeadDescription = [
+    "Lead cross-team accessibility implementation bringing the application into compliance with WCAG/508",
+    "Implemented features for a micro-frontend architecture React Native health insurance application written in JavaScript/TypeScript supporting Android and iOS at scale",
+    "Aligned team requirements and implemented analytics using Adobe Analytics",
+    "Developed frontend and backend features to consume GraphQL and REST services from external APIs",
+    "Implemented authentication flow changes and improvements to biometric authentication flow"
   ]
 
-  export const notificationsAndSettingsDescription =  [
-    "Contributed features and test coverage to a real time event driven notification service using Kafka",
-    "Built and maintained a RESTful service storing the settings preferences for thousands of IBMers across multiple application tenants in a Cassandra NoSQL database"
+  export const centeneSeniorDescription = [
+    "Upgraded React Native project by 7 major versions improving application security and performance",
+    "Migrated application to React Native new architecture",
+    "Implemented authentication flow changes and improvements to biometric authentication flow"
   ]
 
-  export const graphAndHomepage = [
-    "Maintained production code and documentation for a GraphQL layer combining resolvers for more than 20 RESTful and gRPC microservices to service a unified UI experience",
-    "Improved Oauth2 login experience within the w3 homepage through continuous delivery",
-    "Instituted code review and unit testing standards across the internal organization",
-    "Identified and fixed numerous production bugs",
-    "Implemented new backend services to improve IBM intranet homepage as an individual contributor in response to organizational needs",
-    "Developed frontend features to improve the internal IBM w3 Homepage used by more than 200,000 employees",
-    "Coordinated releases of w3 homepage application as part of a 4 person leadership rotation"
+  export const ibmBand07Description = [
+    "Developed Slack application for product-specific IT support using Generative AI and RAG technology",
+    "Led a development team building a cross-platform React Native mobile application for iOS and Android including offline mode used daily by thousands of IBMers for enterprise directory lookup",
+    "Designed and implemented a SQLite-based backend Node service to enable offline access to enterprise directory information in Swift and React Native mobile applications",
+    "Managed release planning, delegated work, prioritized tasks, and broke down Jira issues with product owners to ensure timely delivery of features based on product roadmap",
+    "Mentored team members and provided technical guidance for feature development"
   ]
 
-  export const mobile = [
-    "Led development team building an enterprise React Native application for release on iOS and Android",
-    "Architected a backend service allowing offline access to enterprise directory information supporting shared usage by internal mobile applications built in Swift and React Native",
-    "Assisted teammates to troubleshoot complex technical problems",
-    "Coordinated release planning and prioritized JIRA ticket work with product owners",
-    "Supervised development of new mobile application features",
-    "Implemented deployment processes for mobile application using Jenkins and App Center",
-    "Delivered improved application on a new architecture using React Native resulting in greater cross team collaboration and decreased reliance on rare skills within the department"
-  ]
-
-  export const slackApp = [
-    "Developed slack application handling user interactions handling chatbot interactions using generative AI RAG backend enabling product specific IT Support",
-    "Collaborated with team to develop architecture for end to end system flow"
+  export const ibmBand06Description = [
+    "Developed and maintained internal employee intranet website front-end built with Vue and Node backend services written in JavaScript/TypeScript to enhance IBMer productivity",
+    "Maintained and enhanced a GraphQL API layer, integrating over 20 RESTful and gRPC microservices to provide a unified experience supporting internal web application front-end",
+    "Implemented production features for internal web application refactor from Vue to React",
+    "Developed and maintained a RESTful service to store user preferences for thousands of employees across multiple application tenants in a Cassandra NoSQL database with more than 80% test coverage"
   ]
 

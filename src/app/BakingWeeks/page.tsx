@@ -1,27 +1,35 @@
 import React from "react"
+import type { Metadata } from "next"
 import styles from "@/styles/BakingWeeks.module.css"
 import PostInfo from "@/components/PostInfo"
+import ProjectLink from "@/components/ProjectLink"
+import { getAllPostsMeta } from "@/hooks/postHooks"
 
-const BakingWeeks = () => {
+export const metadata: Metadata = {
+  title: "52 Weeks of Baking — Ann-Marie Kemp",
+  description: "A different dessert every week for a year, as part of a 2015 reddit baking challenge.",
+}
+
+const BakingWeeks = async () => {
+  const posts = await getAllPostsMeta('baking');
   return (
       <div className="main-page-container">
         <div className={`${styles["baking-page"]} ${styles['baking-links']}`}>
-          <p className="page-header">52 Weeks of Baking 2015</p>
+          <h1 className="page-header">52 Weeks of Baking 2015</h1>
           <p className={`description-text ${styles['baking']}`}>
-            In 2015 Ann-Marie participated in a reddit challenge where she baked
-            a different dessert every week for a year. These are the posts she
-            made on reddit from that year.
+            In 2015, Ann-Marie baked a different dessert every week for a year as part of a reddit challenge &mdash; these are the posts from that year.
           </p>
 
           <div className={styles["baking-box"]}>
-            {[].length ? (
-              <PostInfo posts={[]} />
+            {posts.length ? (
+              <PostInfo posts={posts} />
             ) : (
               <p className="sub-header">
                 Sorry, there are no posts to display right now
               </p>
             )}
           </div>
+          <ProjectLink linkTo="/Crafts" linkText="Back to Crafts" variant="craft" />
         </div>
       </div>
   )

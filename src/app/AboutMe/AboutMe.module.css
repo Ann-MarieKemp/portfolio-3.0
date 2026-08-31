@@ -1,59 +1,19 @@
-.about-me-tag {
-  display: flex;
-  font-size: 22px;
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-
-.link-outer-container {
-  display: flex;
-  justify-content: space-evenly;
-}
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.skills-wrapper {
-  /* background-color: #16425b; */
-  width: 300px;
-  padding-bottom: 1em;
-  border-radius: 3px;
-}
-.skills-list {
-  text-align: center;
-}
-.crafts-link {
-  color: #A9A9A9;
+.inline-link {
+  color: var(--color-accent);
   align-self: center;
-  text-decoration: none;
-  font-size: 24px;
+  text-decoration: underline;
+  font-size: inherit;
 }
-.crafts-link-wrapper {
-  display: flex;
-  flex-direction: column;
-  border: 2px dotted #bbc9d9;
-  padding: 0 10px 10px 10px;
-  align-items: center;
-}
-.crafts-link:hover {
-  color: #bbc9d9;
-}
-.mainpage-project-link-container {
-  display: flex;
-  width: 90vw;
-  justify-content: space-evenly;
-  padding: 0 2em;
-  flex-wrap: wrap;
-}
-.about-me-tag.index {
-  flex-direction: column;
-  align-items: center;
-}
-.about-me-tag.index p {
-  flex-direction: column;
-  text-align: center;
+.inline-link:hover {
+  color: var(--color-accent-hover);
 }
 .nyc-info {
   margin-top: 3em;
+}
+.medium-articles {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
 }

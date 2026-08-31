@@ -4,14 +4,14 @@ import ProjectLink from "@/components/ProjectLink";
 import profileImage from '@/images/mainPortfolioImage.jpg'
 import Image from 'next/image';
 
-const Home =  () => {
+const Home = () => {
   return (
     <div className="main-page-container" >
       <Image src={profileImage} alt="Picture of Ann-Marie Kemp" height="315" width="315" className="portfolio-photo"/>
       <h1 className="main-page-header">Hello, my name is Ann-Marie Kemp</h1>
       <div className={`${styles['about-me-tag']} ${styles['index']}`}>
         <p>
-          I am a <span className={styles['fade-in']}>Full Stack Software Developer</span> who enjoys troubleshooting, testing, and documentation.
+          I am a <span className={styles['fade-in']}>Mobile Engineering Lead</span> — React Native, mobile architecture, and accessibility at scale.
         </p>
         <div className={styles['mainpage-project-link-container']}>
           <ProjectLink
@@ -19,13 +19,29 @@ const Home =  () => {
             linkText="About Ann-Marie"
           />
           <ProjectLink
+            linkTo="/Resume"
+            linkText="Experience"
+          />
+          <ProjectLink
+            linkTo="/Education"
+            linkText="Education"
+          />
+          <ProjectLink
             linkTo="/Projects"
             linkText="Projects"
           />
-          {/* <ProjectLink
+            <ProjectLink
+            linkTo="/AudioEngineering"
+            linkText="Audio Engineering"
+          />
+          <ProjectLink
             linkTo="/Crafts"
             linkText="Crafts"
-          /> */}
+          />
+          <ProjectLink
+            linkTo="/Writing"
+            linkText="Writing"
+          />
           <ProjectLink
             linkTo="/ContactInfo"
             linkText="Contact Info"

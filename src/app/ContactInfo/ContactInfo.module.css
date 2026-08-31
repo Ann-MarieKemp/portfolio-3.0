@@ -1,22 +1,6 @@
-.form-label {
-  color: #A9A9A9;
-  font-size: 24px;
-  width: 300px;
-}
-
-.clear {
-  color: #A9A9A9;
-  height: 50px;
-  width: 200px;
-  font-size: 28px;
-  font-family: Georgia;
-  border-radius: 3px;
-  margin: 10px auto;
-}
-
 .contact-email {
   font-size: 20px;
-  color: #FFFFFF;
+  color: var(--color-text);
   margin-bottom: 2rem;
 }
 .contact-link-container {
@@ -24,11 +8,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 75vw;
+  width: 100%;
+  max-width: var(--content-max-width);
+  padding: 0 var(--space-4);
 }
 .contact-email:visited {
-  color: #FFFFFF;
-}
-.form-input {
-  font-size: 16px;
+  color: var(--color-text);
 }

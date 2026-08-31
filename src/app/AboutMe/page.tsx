@@ -1,40 +1,147 @@
 import React from "react"
+import Link from "next/link"
+import type { Metadata } from "next"
 import styles from "./AboutMe.module.css";
+import Carousel from "@/components/Carousel"
+import { getMediumArticles } from "@/hooks/mediumHooks"
 
-const AboutMe = () => {
+export const metadata: Metadata = {
+  title: "About — Ann-Marie Kemp",
+  description: "Mobile Engineering Lead specializing in React Native, mobile architecture, and accessibility — background, career history, and education.",
+}
+
+const kittyPhotos = [
+  "/images/kitty/IMG_0717.jpg",
+  "/images/kitty/IMG_1303.jpg",
+  "/images/kitty/IMG_1311.jpg",
+  "/images/kitty/IMG_1312.jpg",
+  "/images/kitty/IMG_1364.jpg",
+  "/images/kitty/IMG_2150.jpg",
+  "/images/kitty/IMG_3373.jpg",
+  "/images/kitty/IMG_5787.jpg",
+  "/images/kitty/IMG_6191.jpg",
+  "/images/kitty/image000000.jpg",
+]
+
+const AboutMe = async () => {
+  const articles = await getMediumArticles(3);
+
   return (
       <div className="main-page-container">
-        <p className="page-header">About Ann-Marie</p>
+        <h1 className="page-header">Hi, I&apos;m Ann-Marie 👋</h1>
         <div className="description-text">
           <p>
-          Ann-Marie is currently a software developer in the CIO organization at IBM building internal tools to support and increase IBMer productivity. She has served in technical leadership roles including leading a team to build a React Native application that is a companion to the internal IBM homepage as well as coordinating deployments of the intranet homepage across multiple teams. She has contributed to the internal IBM homepage through three iterations built in React and VueJS. She has helped to build a GraphQL layer combining multiple internal support applications to enable more efficient API calls from the application&apos;s frontend. She is a strong communicator and loves to spend time helping her colleagues troubleshoot technical issues.
+            I&apos;m a <strong>Lead Application Development Engineer at Centene</strong> specializing in mobile application development with <strong>React Native, TypeScript, and JavaScript</strong>. I work on large-scale healthcare applications, with a focus on mobile architecture, accessibility, application modernization, and building maintainable systems that can evolve across multiple products and teams.
           </p>
           <br />
           <p>
-          Ann-Marie holds a degree in theatrical production design and technology from the University of Arizona with an emphasis in Sound Design. She began her theatrical career in New York City as a sound engineer and technician for theatrical productions working at some of the city's most famous off-broadway theaters including The Public Theater, Second Stage Theater and Playwrights Horizons. Highlights of her theatrical career included mixing the pre-broadway run of Fun Home at The Public, a revival of The Last Five Years directed by Jason Robert Brown at Second Stage, and working as a microphone technician at the Delacorte Theater in Central Park.
+            My work spans the full mobile stack&mdash;from React Native application architecture and state management to native iOS and Android integrations, API design, authentication, analytics, testing, CI/CD, and production troubleshooting. I particularly enjoy digging into difficult problems that cross the boundaries between JavaScript, native mobile platforms, backend services, and third-party SDKs.
           </p>
           <br />
           <p>
-          She has also worked as a broadcast sound engineer, working as a microphone technician and stage manager with NEP Group for Al Jazeera America as well as mixing a live nightly fashion broadcast for Amazon. She also spent a few years as a staff member at Thomson Reuters mixing nightly broadcasts for a news channel called i24 News. She has also mixed national broadcasts as a freelancer at other news stations including Fox News/Fox Business.
+            Technical leadership has been a consistent part of my career. I enjoy helping teams work through architectural decisions, troubleshooting complex issues, improving engineering practices, and mentoring other developers.
+          </p>
+          <br />
+
+          <h2 className="sub-header">Previously</h2>
+          <p>
+            Before joining Centene, I was a <strong>Software Developer in IBM&apos;s CIO organization</strong>, where I built internal applications designed to improve employee productivity.
           </p>
           <br />
           <p>
-              Ann-Marie lives in Arizona with her wonderful husband, her son, and her cat Carnival.
-            </p>
+            At IBM, I contributed to multiple generations of the company&apos;s internal homepage using <strong>React and Vue.js</strong>, helped build a <strong>GraphQL API layer</strong> that unified data from multiple internal services, and served in technical leadership roles across several projects.
+          </p>
           <br />
-          <div className={styles['skills-container']}>
-              <p className="sub-header-red">Technical Skills: <br/> TypeScript, JavaScript, React, React Native, VueJS, Node, Redux, HTML, CSS, Git, SQL, Express, Jest, Github, PostgreSQL, Cassandra, GraphQL, Jira, Travis, Jenkins, RAG, LangChain, NoSQL Databases </p>
-              <br/>
-            <p className="sub-header-red">Audio Technical Skills:
-            <br/>
-              Consoles: Calrec Sigma, DiGiCo SD9/10/11, SSL C100, Studer Vista 5, Cadac J-Type, Yamaha CL Series
-            <br/>
-              Software: Pro Tools, Logic, Qlab, AZ Edit, iNews, ENCO
-            <br/>
-              Other Skills: Dante certified, XLR/CAT5 termination, soldering
-            </p>
-          </div>
-          </div>
+          <p>
+            I also led development of a <strong>React Native companion application for IBM&apos;s internal homepage</strong> and coordinated deployments of the intranet homepage across multiple teams.
+          </p>
+          <br />
+
+          <h2 className="sub-header">From Sound Engineering to Software Engineering</h2>
+          <p>
+            My route into software engineering was not a traditional one.
+          </p>
+          <br />
+          <p>
+            I hold a degree in <strong>Theatrical Production Design and Technology from the University of Arizona</strong>, with an emphasis in Sound Design. Before becoming a software engineer, I spent more than a decade working in professional theater and broadcast audio.
+          </p>
+          <br />
+          <p>
+            I began my career in New York City working as a theatrical sound engineer and technician at venues including <strong>The Public Theater, Second Stage Theater, Playwrights Horizons, and the Delacorte Theater in Central Park</strong>. Career highlights included working on the pre-Broadway production of <em>Fun Home</em> at The Public Theater and the Jason Robert Brown-directed revival of <em>The Last Five Years</em> at Second Stage.
+          </p>
+          <br />
+          <p>
+            I later moved into broadcast engineering, working with organizations including <strong>NEP Group, Al Jazeera America, Amazon, Thomson Reuters, i24 News, Fox News, and Fox Business</strong>.
+          </p>
+          <br />
+          <p>
+            That background still influences how I approach engineering today: complex systems, live production, troubleshooting under pressure, communication across disciplines, and making sure everything works when it actually matters.{" "}
+            <Link className={styles["inline-link"]} href="/AudioEngineering">
+              See the full timeline
+            </Link>.
+          </p>
+          <br />
+
+          <h2 className="sub-header">What I&apos;m Working On</h2>
+          <p>These days I&apos;m particularly interested in:</p>
+          <p>
+            React Native and native mobile architecture<br />
+            Mobile accessibility<br />
+            TypeScript and modern JavaScript<br />
+            iOS and Android platform integration<br />
+            GraphQL and API architecture<br />
+            Application state and data architecture<br />
+            Design patterns and software architecture<br />
+            Testing and developer tooling<br />
+            AWS and serverless backend systems<br />
+            AI-assisted software development
+          </p>
+          <br />
+          <p>
+            I&apos;m also continuing my computer science education while expanding deeper into algorithms, systems, machine learning, and software architecture.{" "}
+            <Link className={styles["inline-link"]} href="/Education">
+              See my education and certifications
+            </Link>.
+          </p>
+          <br />
+
+          <h2 className="sub-header">Writing</h2>
+          <p>
+            I occasionally write about software development and things I&apos;ve learned along the way.
+          </p>
+          {articles.length > 0 && (
+            <ul className={styles['medium-articles']}>
+              {articles.map((article) => (
+                <li key={article.link}>
+                  <a href={article.link} target="_blank" rel="noopener noreferrer">
+                    {article.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+          <p>
+            <Link className={styles["inline-link"]} href="/Writing">
+              See all writing
+            </Link>
+          </p>
+          <br />
+
+          <p>
+            I&apos;m always interested in learning more about <strong>mobile engineering, software architecture, accessibility, and the increasingly blurry line between native and cross-platform development</strong>.
+          </p>
+          <br />
+
+          <p>
+            Outside of engineering, I spend a lot of my time on crafts&mdash;baking, weaving, spinning, knitting, crochet, and more.{" "}
+            <Link className={styles["inline-link"]} href="/Crafts">
+              Take a look at what I&apos;ve made
+            </Link>.
+          </p>
+
+          <h2 className={`sub-header ${styles["nyc-info"]}`}>Carnival the Cat</h2>
+          <Carousel images={kittyPhotos} altPrefix="Carnival the cat" />
+        </div>
       </div>
   )
 }

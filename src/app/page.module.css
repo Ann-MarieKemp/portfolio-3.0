@@ -1,50 +1,8 @@
 .about-me-tag {
   display: flex;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 1em;
   margin-top: 1em;
-}
-
-.link-outer-container {
-  display: flex;
-  justify-content: space-evenly;
-}
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.skills-wrapper {
-  /* background-color: #16425b; */
-  width: 300px;
-  padding-bottom: 1em;
-  border-radius: 3px;
-}
-.skills-list {
-  text-align: center;
-}
-.crafts-link {
-  color: #A9A9A9;
-  align-self: center;
-  text-decoration: none;
-  font-size: 24px;
-}
-.crafts-link-wrapper {
-  display: flex;
-  flex-direction: column;
-  border: 2px dotted #A9A9A9;
-  padding: 0 10px 10px 10px;
-  align-items: center;
-}
-.crafts-link:hover {
-  color: #FF3B3F;
-}
-.mainpage-project-link-container {
-  display: flex;
-  width: 90vw;
-  justify-content: space-evenly;
-  padding: 0 2em;
-  flex-wrap: wrap;
 }
 .about-me-tag.index {
   flex-direction: column;
@@ -54,6 +12,23 @@
   flex-direction: column;
   text-align: center;
 }
-.nyc-info {
-  margin-top: 3em;
+.mainpage-project-link-container {
+  display: flex;
+  width: 100%;
+  max-width: var(--page-max-width);
+  justify-content: center;
+  gap: var(--space-4);
+  padding: 0 var(--space-4);
+  flex-wrap: wrap;
+}
+.fade-in {
+  animation: fadeIn ease 1.2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

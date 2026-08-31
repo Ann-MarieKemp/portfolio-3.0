@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ann-Marie Kemp — Portfolio
+
+Personal portfolio site built with Next.js (App Router), statically exported and hosted on Amazon S3.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Craft posts** live as MDX files under `src/app/PostPage/<category>/<slug>.mdx`, one folder per category (`baking`, `weaving`, `crochet`, `knitting`, `paper`, `spinning`). Each post's frontmatter (`title`, `slug`, `image`, `category`, optional `images` for a carousel, optional `rotate`) is compiled via `next-mdx-remote` in `src/hooks/postHooks.ts`.
+- Post images live under `public/images/posts/<category>/<slug>/`.
+- Project descriptions live in `src/constants/projectvariables.ts`.
 
-## Learn More
+## Building
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This produces a fully static export in `out/` (`output: 'export'` in `next.config.mjs`) — no Node server is required to host it. `trailingSlash: true` is set so routes emit `<route>/index.html`, which is what makes folder-style URLs (e.g. `/AboutMe/`) resolve correctly on S3's static website hosting.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploying to S3
 
-## Deploy on Vercel
+The site deploys to the `a-mkemp.com` S3 bucket (see the site's DNS/bucket setup — this isn't managed from this repo). To deploy:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Install and configure the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) with credentials that have write access to the target bucket (`aws configure`).
+2. Confirm the bucket has **static website hosting** enabled, with `index.html` as the index document and `404.html` as the error document.
+3. Run:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   S3_BUCKET=a-mkemp.com npm run deploy
+   ```
+
+   This runs `next build` and syncs the resulting `out/` directory to the bucket via `aws s3 sync --delete` (removing files in the bucket that no longer exist locally).
+
+The bucket name is passed via the `S3_BUCKET` environment variable rather than hardcoded, so nothing AWS-account-specific lives in this repo. There is no CI/CD — deploys are manual, run from your own machine.
+
+If the site sits behind CloudFront, invalidate the distribution's cache after deploying (`aws cloudfront create-invalidation --distribution-id <id> --paths "/*"`) — this repo doesn't manage a CloudFront distribution, so that's a separate manual step if applicable.
