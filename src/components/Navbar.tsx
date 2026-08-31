@@ -52,8 +52,8 @@ const Navbar = () => {
           <Link className={styles["page-link"]} href="/Education" onClick={() => setMenuOpen(false)}>
             Education
           </Link>
-          <Link className={styles["page-link"]} href="/EarlyCareer" onClick={() => setMenuOpen(false)}>
-            Early Career
+          <Link className={styles["page-link"]} href="/AudioEngineering" onClick={() => setMenuOpen(false)}>
+            Audio Engineering
           </Link>
           <Link className={styles["page-link"]} href="/Projects" onClick={() => setMenuOpen(false)}>
             Projects

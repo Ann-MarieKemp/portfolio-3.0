@@ -76,7 +76,7 @@ const AboutMe = async () => {
           <br />
           <p>
             That background still influences how I approach engineering today: complex systems, live production, troubleshooting under pressure, communication across disciplines, and making sure everything works when it actually matters.{" "}
-            <Link className={styles["inline-link"]} href="/EarlyCareer">
+            <Link className={styles["inline-link"]} href="/AudioEngineering">
               See the full timeline
             </Link>.
           </p>

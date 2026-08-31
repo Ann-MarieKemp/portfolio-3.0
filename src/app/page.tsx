@@ -27,8 +27,8 @@ const Home = () => {
             linkText="Education"
           />
           <ProjectLink
-            linkTo="/EarlyCareer"
-            linkText="Early Career"
+            linkTo="/AudioEngineering"
+            linkText="Audio Engineering"
           />
           <ProjectLink
             linkTo="/Projects"
