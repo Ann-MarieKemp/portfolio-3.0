@@ -2,6 +2,7 @@ import React from "react"
 import type { Metadata } from "next"
 import styles from "@/styles/BakingWeeks.module.css"
 import PostInfo from "@/components/PostInfo"
+import ProjectLink from "@/components/ProjectLink"
 import { getAllPostsMeta } from "@/hooks/postHooks"
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ const BakingWeeks = async () => {
               </p>
             )}
           </div>
+          <ProjectLink linkTo="/Crafts" linkText="Back to Crafts" variant="craft" />
         </div>
       </div>
   )

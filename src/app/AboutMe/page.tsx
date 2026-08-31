@@ -24,7 +24,7 @@ const kittyPhotos = [
 ]
 
 const AboutMe = async () => {
-  const articles = await getMediumArticles();
+  const articles = await getMediumArticles(3);
 
   return (
       <div className="main-page-container">
@@ -121,9 +121,9 @@ const AboutMe = async () => {
             </ul>
           )}
           <p>
-            <a href="https://medium.com/@amkemp" target="_blank" rel="noopener noreferrer">
-              See all posts on Medium
-            </a>
+            <Link className={styles["inline-link"]} href="/Writing">
+              See all writing
+            </Link>
           </p>
           <br />
 

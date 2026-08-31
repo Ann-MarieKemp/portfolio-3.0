@@ -12,6 +12,7 @@ import {
   FaTimes,
 } from "react-icons/fa"
 import  styles from "@/styles/Navbar.module.css"
+import ThemeToggle from "@/components/ThemeToggle"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -28,14 +29,17 @@ const Navbar = () => {
         />
         <p className={styles["name-spacing"]}>Ann-Marie Kemp</p>
       </Link>
-      <button
-        className={styles["menu-toggle"]}
-        onClick={() => setMenuOpen((open) => !open)}
-        aria-label={menuOpen ? "Close menu" : "Open menu"}
-        aria-expanded={menuOpen}
-      >
-        {menuOpen ? <FaTimes size="22" /> : <FaBars size="22" />}
-      </button>
+      <div className={styles["header-controls"]}>
+        <ThemeToggle className={`${styles["icon-button"]} ${styles["theme-toggle-header"]}`} />
+        <button
+          className={styles["menu-toggle"]}
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <FaTimes size="22" /> : <FaBars size="22" />}
+        </button>
+      </div>
       <div
         className={`${styles['links-and-icons-container']} ${menuOpen ? styles['menu-open'] : ""}`}
       >
@@ -60,6 +64,9 @@ const Navbar = () => {
           </Link>
           <Link className={styles["page-link"]} href="/Crafts" onClick={() => setMenuOpen(false)}>
             Crafts
+          </Link>
+          <Link className={styles["page-link"]} href="/Writing" onClick={() => setMenuOpen(false)}>
+            Writing
           </Link>
           <Link className={styles["page-link"]} href="/ContactInfo" onClick={() => setMenuOpen(false)}>
             Contact
@@ -100,6 +107,7 @@ const Navbar = () => {
           >
             <FaFileDownload size="24" />
           </a>
+          <ThemeToggle className={`${styles["icon-button"]} ${styles["theme-toggle-icons"]}`} />
         </div>
       </div>
     </nav>

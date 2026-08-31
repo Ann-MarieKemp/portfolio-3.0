@@ -27,16 +27,20 @@ const Home = () => {
             linkText="Education"
           />
           <ProjectLink
+            linkTo="/Projects"
+            linkText="Projects"
+          />
+            <ProjectLink
             linkTo="/AudioEngineering"
             linkText="Audio Engineering"
           />
           <ProjectLink
-            linkTo="/Projects"
-            linkText="Projects"
-          />
-          <ProjectLink
             linkTo="/Crafts"
             linkText="Crafts"
+          />
+          <ProjectLink
+            linkTo="/Writing"
+            linkText="Writing"
           />
           <ProjectLink
             linkTo="/ContactInfo"

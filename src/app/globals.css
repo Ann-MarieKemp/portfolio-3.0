@@ -38,7 +38,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --color-bg: #18181b;
     --color-bg-elevated: #232326;
     --color-text: #faf9f6;
@@ -51,6 +51,20 @@
     --color-accent-warm: #e0965f;
     --color-accent-warm-hover: #eeb083;
   }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #18181b;
+  --color-bg-elevated: #232326;
+  --color-text: #faf9f6;
+  --color-text-muted: #a8a29e;
+  --color-accent: #7fa8c9;
+  --color-accent-hover: #a3c2dc;
+  --color-accent-vivid: #a3c2dc;
+  --color-border: #33322f;
+  --color-shadow: rgba(0, 0, 0, 0.35);
+  --color-accent-warm: #e0965f;
+  --color-accent-warm-hover: #eeb083;
 }
 
 .tag-chip {
@@ -195,10 +209,18 @@ a:hover {
 }
 
 .craft-category-div {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
   padding: 0;
+}
+@media (max-width: 768px) {
+  .craft-category-div {
+    grid-template-columns: 1fr;
+  }
 }
 @media screen {
   html,

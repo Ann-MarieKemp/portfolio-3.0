@@ -21,6 +21,7 @@ const PostLayout = ({ meta, content }: PostLayoutProps) => {
 
   return (
     <div className="main-page-container">
+      <h1 className="page-header">{meta.title}</h1>
       <Image
         src={meta.image}
         alt={meta.title}

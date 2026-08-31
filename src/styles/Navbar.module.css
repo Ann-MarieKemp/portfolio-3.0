@@ -76,9 +76,38 @@
   color: var(--color-accent-vivid);
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: var(--space-2);
+}
+.icon-button:hover {
+  color: var(--color-accent-vivid);
+}
+
+.theme-toggle-header {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+  }
+  .theme-toggle-header {
+    display: flex;
+  }
+  .theme-toggle-icons {
+    display: none;
   }
   .links-and-icons-container {
     display: none;

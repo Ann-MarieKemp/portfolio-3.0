@@ -41,7 +41,7 @@ export const theaterCredits: TheaterCredit[] = [
   { year: "2009", show: "Post No Bills", venue: "Rattlestick Playwrights Theater", role: "A1 - Audio Engineer", url: "https://www.newyorker.com/goings-on-about-town/theatre/post-no-bills" },
 
   { year: "2010", show: "The Book of Grace", venue: "The Public Theater", role: "Shop Prep / Load-In", soundDesigner: "Dan Moses Schreier", note: "First New York call with The Public Theater" },
-  { year: "2010", show: "Romeo and Juliet", venue: "The Acting Company / Guthrie Theater — National Tour", role: "Sound Operator", soundDesigner: "Scott W. Edwards", url: "https://www.broadwayworld.com/minneapolis/article/Guthrie-Theater-and-The-Acting-Company-Launch-ROMEO-JULIET-Tour-113-20100113" },
+  { year: "2010", show: "Romeo and Juliet", venue: "The Acting Company / Guthrie Theater — National Tour (NY Sitdown Only)", role: "Sound Operator", soundDesigner: "Scott W. Edwards", url: "https://www.broadwayworld.com/minneapolis/article/Guthrie-Theater-and-The-Acting-Company-Launch-ROMEO-JULIET-Tour-113-20100113" },
   { year: "2010", show: "The Merchant of Venice", venue: "The Public Theater — Shakespeare in the Park, Delacorte Theater", role: "A2", soundDesigner: "Acme Sound Partners" },
   { year: "2010", show: "The Winter's Tale", venue: "The Public Theater — Shakespeare in the Park, Delacorte Theater", role: "A2", soundDesigner: "Acme Sound Partners" },
   { year: "2010", show: "The Capeman", venue: "The Public Theater — Delacorte Theater", role: "A2", soundDesigner: "Acme Sound Partners" },
@@ -53,7 +53,7 @@ export const theaterCredits: TheaterCredit[] = [
   { year: "2011", show: "Sweeney Todd", venue: "NYU Steinhardt", role: "FOH Engineer" },
   { year: "2011", show: "King Lear", venue: "The Public Theater", role: "A1 - Audio Engineer", soundDesigner: "Darron L West" },
 
-  { year: "2012", show: "The Total Bent", venue: "The Public Theater / Public LAB", role: "A1 - Audio Engineer" },
+  { year: "2012", show: "The Total Bent", venue: "The Public Theater / Public LAB", role: "A1 - Audio Engineer", soundDesigner: "Acme Sound Partners" },
   { year: "2012", show: "February House", venue: "The Public Theater", role: "A1 - Audio Engineer", soundDesigner: "Leon Rothenberg" },
   { year: "2012", show: "The Ohmies", venue: "Playwrights Horizons — Peter Jay Sharp Theater / Upstairs", role: "A1 - Audio Engineer Sub" },
   { year: "2012", show: "Into the Woods", venue: "The Public Theater — Shakespeare in the Park, Delacorte Theater", role: "A2 Sub", soundDesigner: "Acme Sound Partners" },
@@ -104,7 +104,7 @@ export const broadcastRoles: AudioEngineeringRole[] = [
   },
   {
     role: "Interim Production Manager",
-    company: "Kelson Productions",
+    company: "Kelson Productions/The Forum at Columbia University",
     dates: "April 2019 - August 2019",
     bullets: [
       "Managed and coordinated crew and presentation logistics for Columbia University events",
@@ -166,4 +166,5 @@ export const audioEngineeringSkills = [
   "Dante certified",
   "RTS com system troubleshooting and programming",
   "XLR and Cat5 termination",
+  "Soldering",
 ]

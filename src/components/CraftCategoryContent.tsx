@@ -1,10 +1,11 @@
 import React from "react"
 import CraftPostCard from "@/components/CraftPostCard"
+import ProjectLink from "@/components/ProjectLink"
 import { getAllPosts } from "@/hooks/postHooks"
 import bakingStyles from "@/styles/BakingWeeks.module.css"
 import craftStyles from "@/styles/CraftPostCard.module.css"
 
-type SparsePostCategory = "weaving" | "crochet" | "knitting" | "paper" | "spinning";
+type SparsePostCategory = "weaving" | "crochet" | "paper" | "spinning";
 
 interface CraftCategoryContentProps {
   category: SparsePostCategory;
@@ -29,6 +30,7 @@ const CraftCategoryContent = async ({ category, title, description }: CraftCateg
             <p className="sub-header">Sorry, there are no posts to display right now</p>
           )}
         </div>
+        <ProjectLink linkTo="/Crafts" linkText="Back to Crafts" variant="craft" />
       </div>
     </div>
   )

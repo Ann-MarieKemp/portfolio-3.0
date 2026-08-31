@@ -7,10 +7,10 @@ import styles from "./Crafts.module.css"
 
 export const metadata: Metadata = {
   title: "Craft Projects — Ann-Marie Kemp",
-  description: "Baking, weaving, crochet, knitting, spinning, and paper craft projects made by Ann-Marie Kemp.",
+  description: "Baking, weaving, knitting, crochet, spinning, and paper craft projects made by Ann-Marie Kemp.",
 }
 
-const craftCategories = ["paper", "baking", "knitting", "crochet", "spinning", "weaving"] as const
+const craftCategories = ["paper", "baking", "crochet", "spinning", "weaving"] as const
 
 const craftArray = craftCategories.map((category) => ({
   category,
